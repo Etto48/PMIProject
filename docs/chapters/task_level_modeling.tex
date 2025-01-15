@@ -1,0 +1,75 @@
+\subsection{Segregation system}
+
+\subsubsection{Check data balancing}
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|l|c|c|}
+\hline
+\textbf{Step} & \textbf{Cost calculation} & \textbf{SC} \\
+\hline
+\textbf{1} \textbf{ACTOR} opens "Check data balancing" form. & & \\
+\hline
+\textbf{2} \textbf{SYSTEM} shows the report. & & \\
+\hline
+\textbf{3} \textbf{SYSTEM} shows a hint whether the data is balanced or not. & & \\
+\hline
+\textbf{4} \textbf{ACTOR} checks threshold in the UI. & & \\
+\hline
+\textbf{5} \textbf{FOR} each column in the report: & & \\
+\hline
+\textbf{5.1} \textbf{IF} the column is not within the displayed threshold. & & \\
+\hline
+\textbf{5.1.1} \textbf{THEN} the data is not balanced. & & \\
+\hline
+\textbf{6.1} \textbf{IF} the data is balanced. & & \\
+\hline
+\textbf{6.1.1} \textbf{ACTOR} clicks "Balanced" button. & & \\
+\hline
+\textbf{6.2} \textbf{ELSE} & & \\
+\hline
+\textbf{6.2.1} \textbf{ACTOR} clicks "Unbalanced" button. & & \\
+\hline
+\textbf{7} \textbf{SYSTEM} shows a confirmation dialog. & & \\
+\hline
+\textbf{8} \textbf{ACTOR} closes the form. & & \\
+\hline
+\end{tabular}
+\caption{Detailed use case for "Check data balancing" task}
+\label{table:check_data_balancing}
+\end{table}
+
+\subsubsection{Check input coverage}
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|l|c|c|}
+\hline
+\textbf{Step} & \textbf{Cost calculation} & \textbf{SC} \\
+\hline
+\textbf{1} \textbf{ACTOR} opens "Check input coverage" form. & & \\
+\hline
+\textbf{2} \textbf{SYSTEM} shows a radar scatter plot of the input distribution. & & \\
+\hline
+\textbf{3} \textbf{FOR} each radius in the radar scatter plot: & & \\
+\hline
+\textbf{3.1} \textbf{IF} the distribution is not uniform as expected. & & \\
+\hline
+\textbf{3.1.1} \textbf{THEN} the input coverage is not satisfied. & & \\
+\hline
+\textbf{4.1} \textbf{IF} the input coverage is satisfied. & & \\
+\hline
+\textbf{4.1.1} \textbf{ACTOR} clicks "Accept" button. & & \\
+\hline
+\textbf{4.2} \textbf{ELSE} & & \\
+\hline
+\textbf{4.2.1} \textbf{ACTOR} clicks "Reject" button. & & \\
+\hline
+\textbf{5} \textbf{SYSTEM} shows a confirmation dialog. & & \\
+\hline
+\textbf{6} \textbf{ACTOR} closes the form. & & \\
+\hline
+\end{tabular}
+\caption{Detailed use case for "Check input coverage" task}
+\label{table:check_input_coverage}
+\end{table}
