@@ -10,35 +10,37 @@
 
 \begin{table}[H]
 \centering
-\begin{tabular}{|l|c|c|}
+\begin{tabular}{|l|c|c|c|c|}
 \hline
-\textbf{Step} & \textbf{Cost calculation} & \textbf{SC} \\
+\textbf{Step} & \textbf{O} & \textbf{CL} & \textbf{S} & \textbf{SC} \\
 \hline
-\textbf{1} \textbf{ACTOR} opens "Check data balancing" form. & & \\
+\textbf{1} \textbf{ACTOR} opens "Check data balancing" form. & & & & \\
 \hline
-\textbf{2} \textbf{SYSTEM} shows the report. & & \\
+\textbf{2} \textbf{SYSTEM} shows the report. & & & & \\
 \hline
-\textbf{3} \textbf{SYSTEM} shows a hint whether the data is balanced or not. & & \\
+\textbf{3} \textbf{SYSTEM} shows a hint whether the data is balanced or not. & & & & \\
 \hline
-\textbf{4} \textbf{ACTOR} checks threshold in the UI. & & \\
+\textbf{4} \textbf{ACTOR} checks threshold in the UI. & & & & \\
 \hline
-\textbf{5} \textbf{FOR} each column in the report: & & \\
+\textbf{5} \textbf{FOR} each column in the report: & & & & \\
 \hline
-\textbf{5.1} \textbf{IF} the column is not within the displayed threshold. & & \\
+\textbf{5.1} \textbf{IF} the column is not within the displayed threshold. & & & & \\
 \hline
-\textbf{5.1.1} \textbf{THEN} the data is not balanced. & & \\
+\textbf{5.1.1} \textbf{THEN} the data is not balanced. & & & & \\
 \hline
-\textbf{6.1} \textbf{IF} the data is balanced. & & \\
+\textbf{6.1} \textbf{IF} the data is balanced. & & & & \\
 \hline
-\textbf{6.1.1} \textbf{ACTOR} clicks "Balanced" button. & & \\
+\textbf{6.1.1} \textbf{ACTOR} clicks "Balanced" button. & & & & \\
 \hline
-\textbf{6.2} \textbf{ELSE} & & \\
+\textbf{6.2} \textbf{ELSE} & & & & \\
 \hline
-\textbf{6.2.1} \textbf{ACTOR} clicks "Unbalanced" button. & & \\
+\textbf{6.2.1} \textbf{ACTOR} clicks "Unbalanced" button. & & & & \\
 \hline
-\textbf{7} \textbf{SYSTEM} shows a confirmation dialog. & & \\
+\textbf{7} \textbf{SYSTEM} shows a confirmation dialog. & & & & \\
 \hline
-\textbf{8} \textbf{ACTOR} closes the form. & & \\
+\textbf{8} \textbf{ACTOR} closes the form. & & & & \\
+\hline
+\multicolumn{4}{|r|}{Human task cost} & \\
 \hline
 \end{tabular}
 \caption{Detailed use case for "Check data balancing" task}
@@ -80,6 +82,8 @@
 \textbf{5} \textbf{SYSTEM} shows a confirmation dialog. & & \\
 \hline
 \textbf{6} \textbf{ACTOR} closes the form. & & \\
+\hline
+\multicolumn{2}{|r|}{Human task cost} & \\
 \hline
 \end{tabular}
 \caption{Detailed use case for "Check input coverage" task}
