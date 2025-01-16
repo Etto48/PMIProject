@@ -200,3 +200,45 @@
 \caption{Detailed use case for "Check test results" task}
 \label{table:check_test_results}
 \end{table}
+
+
+\subsection{Evaluation system}
+
+\subsubsection{Evaluate classifier performance}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.8\textwidth]{figures/evaluate_classifier_performance.png}
+\caption{"Evaluate classifier performance" mock-up form}
+\end{figure}
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|l|c|c|c|c|}
+\hline
+\textbf{Step} & \textbf{O} & \textbf{CL} & \textbf{S} & \textbf{SC} \\
+\hline
+\textbf{1} \textbf{ACTOR} opens the "Evaluate Classifier Performance" form. & & & & \\
+\hline
+\textbf{2} \textbf{SYSTEM} displays the evaluation report with some metrics (e.g., Accuracy, Recall). & & & & \\
+\hline
+\textbf{3} \textbf{ACTOR} reviews the metrics to determine if the classifier meets the thresholds. & & & & \\
+\hline
+\textbf{4.1} \textbf{IF} the classifier fails evaluation: & & & & \\
+\hline
+\textbf{4.1.1} \textbf{ACTOR} clicks "Fail" button. & & & & \\
+\hline
+\textbf{5.1} \textbf{IF} the classifier passes evaluation: & & & & \\
+\hline
+\textbf{5.1.1} \textbf{ACTOR} clicks "Pass" button. & & & & \\
+\hline
+\textbf{6} \textbf{SYSTEM} shows a confirmation dialog. & & & & \\
+\hline
+\textbf{7} \textbf{ACTOR} closes the form. & & & & \\
+\hline
+\multicolumn{4}{|r|}{Human task cost} & \\
+\hline
+\end{tabular}
+\caption{Detailed use case for "Evaluate Classifier Performance" task}
+\label{table:evaluate_classifier_performance}
+\end{table}
