@@ -57,33 +57,33 @@
 
 \begin{table}[H]
 \centering
-\begin{tabular}{|l|c|c|}
+\begin{tabular}{|l|c|c|c|c|}
 \hline
-\textbf{Step} & \textbf{Cost calculation} & \textbf{SC} \\
+\textbf{Step} & \textbf{O} & \textbf{CL} & \textbf{S} & \textbf{SC} \\
 \hline
-\textbf{1} \textbf{ACTOR} opens "Check input coverage" form. & & \\
+\textbf{1} \textbf{ACTOR} opens "Check input coverage" form. & & & & \\
 \hline
-\textbf{2} \textbf{SYSTEM} shows a radar scatter plot of the input distribution. & & \\
+\textbf{2} \textbf{SYSTEM} shows a radar scatter plot of the input distribution. & & & & \\
 \hline
-\textbf{3} \textbf{FOR} each radius in the radar scatter plot: & & \\
+\textbf{3} \textbf{FOR} each radius in the radar scatter plot: & & & & \\
 \hline
-\textbf{3.1} \textbf{IF} the distribution is not uniform as expected. & & \\
+\textbf{3.1} \textbf{IF} the distribution is not uniform as expected. & & & & \\
 \hline
-\textbf{3.1.1} \textbf{THEN} the input coverage is not satisfied. & & \\
+\textbf{3.1.1} \textbf{THEN} the input coverage is not satisfied. & & & & \\
 \hline
-\textbf{4.1} \textbf{IF} the input coverage is satisfied. & & \\
+\textbf{4.1} \textbf{IF} the input coverage is satisfied. & & & & \\
 \hline
-\textbf{4.1.1} \textbf{ACTOR} clicks "Accept" button. & & \\
+\textbf{4.1.1} \textbf{ACTOR} clicks "Accept" button. & & & & \\
 \hline
-\textbf{4.2} \textbf{ELSE} & & \\
+\textbf{4.2} \textbf{ELSE} & & & & \\
 \hline
-\textbf{4.2.1} \textbf{ACTOR} clicks "Reject" button. & & \\
+\textbf{4.2.1} \textbf{ACTOR} clicks "Reject" button. & & & & \\
 \hline
-\textbf{5} \textbf{SYSTEM} shows a confirmation dialog. & & \\
+\textbf{5} \textbf{SYSTEM} shows a confirmation dialog. & & & & \\
 \hline
-\textbf{6} \textbf{ACTOR} closes the form. & & \\
+\textbf{6} \textbf{ACTOR} closes the form. & & & & \\
 \hline
-\multicolumn{2}{|r|}{Human task cost} & \\
+\multicolumn{4}{|r|}{Human task cost} & \\
 \hline
 \end{tabular}
 \caption{Detailed use case for "Check input coverage" task}
@@ -102,25 +102,68 @@
 
 \begin{table}[H]
 \centering
-\begin{tabular}{|l|c|c|}
+\begin{tabular}{|l|c|c|c|c|}
 \hline
-\textbf{Step} & \textbf{Cost calculation} & \textbf{SC} \\
+\textbf{Step} & \textbf{O} & \textbf{CL} & \textbf{S} & \textbf{SC} \\
 \hline
-\textbf{1} \textbf{ACTOR} opens "Set Iteration Number" form. & & \\
+\textbf{1} \textbf{ACTOR} opens "Set Iteration Number" form. & & & & \\
 \hline
-\textbf{2} \textbf{SYSTEM} displays the current iteration number. & & \\
+\textbf{2} \textbf{SYSTEM} displays the current iteration number. & & & & \\
 \hline
-\textbf{3} \textbf{ACTOR} inputs the desired number of iterations. & & \\
+\textbf{3} \textbf{ACTOR} inputs the desired number of iterations. & & & & \\
 \hline
-\textbf{4} \textbf{ACTOR} clicks "Submit" button to confirm the iteration number. & & \\
+\textbf{4} \textbf{ACTOR} clicks "Submit" button to confirm the iteration number. & & & & \\
 \hline
-\textbf{5} \textbf{SYSTEM} shows a confirmation dialog. & & \\
+\textbf{5} \textbf{SYSTEM} shows a confirmation dialog. & & & & \\
 \hline
-\textbf{6} \textbf{ACTOR} closes the form. & & \\
+\textbf{6} \textbf{ACTOR} closes the form. & & & & \\
 \hline
-\multicolumn{2}{|r|}{Human task cost} & \\
+\multicolumn{4}{|r|}{Human task cost} & \\
 \hline
 \end{tabular}
 \caption{Detailed use case for "Set iteration number" task}
 \label{table:set_iteration_number}
+\end{table}
+
+\subsubsection{Check learning plot}
+
+\subsubsection{Check validation report}
+
+\subsubsection{Check test results}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.8\textwidth]{figures/check_test_results.png}
+\caption{"Check test results" mock-up form}
+\end{figure}
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|l|c|c|c|c|}
+\hline
+\textbf{Step} & \textbf{O} & \textbf{CL} & \textbf{S} & \textbf{SC} \\
+\hline
+\textbf{1} \textbf{ACTOR} opens "Check test results" form. & & & & \\
+\hline
+\textbf{2} \textbf{SYSTEM} shows the test results. & & & & \\
+\hline
+\textbf{3} \textbf{ACTOR} checks the test results. & & & & \\
+\hline
+\textbf{4.1} \textbf{IF} the test results is not satisfactory. & & & & \\
+\hline
+\textbf{4.1.1} \textbf{ACTOR} clicks "Reject" button. & & & & \\
+\hline
+\textbf{4.2} \textbf{ELSE} & & & & \\
+\hline
+\textbf{4.2.1} \textbf{ACTOR} clicks "Approve" button. & & & & \\
+\hline
+\textbf{5} \textbf{SYSTEM} shows a confirmation dialog. & & & & \\
+\hline
+\textbf{6} \textbf{ACTOR} closes the form. & & & & \\
+\hline
+\multicolumn{4}{|r|}{Human task cost} & \\
+\hline
+\end{tabular}
+\caption{Detailed use case for "Check test results" task}
+\label{table:check_test_results}
 \end{table}
