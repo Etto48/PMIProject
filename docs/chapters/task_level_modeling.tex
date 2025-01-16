@@ -127,6 +127,39 @@
 
 \subsubsection{Check learning plot}
 
+\begin{table}[H]
+\centering
+\begin{tabular}{|l|c|c|c|c|}
+\hline
+\textbf{Step} & \textbf{O} & \textbf{CL} & \textbf{S} & \textbf{SC} \\
+\hline
+\textbf{1} \textbf{ACTOR} opens "Check training report" form. & & & & \\
+\hline
+\textbf{2} \textbf{SYSTEM} shows the training loss curve. & & & & \\
+\hline
+\textbf{3.1} \textbf{IF} the loss is flat for at least half of the iterations: & & & & \\
+\hline
+\textbf{3.1.1} \textbf{THEN} \textbf{ACTOR} clicks "Overfit" button. & & & & \\
+\hline
+\textbf{3.2} \textbf{IF} the loss is not flat at the end of the iterations: & & & & \\
+\hline
+\textbf{3.2.1} \textbf{THEN} \textbf{ACTOR} clicks "Underfit" button. & & & & \\
+\hline
+\textbf{3.3} \textbf{ELSE} & & & & \\
+\hline
+\textbf{3.3.1} \textbf{ACTOR} clicks "Approved" button. & & & & \\
+\hline
+\textbf{4} \textbf{SYSTEM} shows a confirmation dialog. & & & & \\
+\hline
+\textbf{5} \textbf{ACTOR} closes the form. & & & & \\
+\hline
+\multicolumn{4}{|r|}{Human task cost} & \\
+\hline
+\end{tabular}
+\caption{Detailed use case for "Check training report" task}
+\label{table:check_training_report}
+\end{table}
+
 \subsubsection{Check validation report}
 
 \subsubsection{Check test results}
