@@ -2,6 +2,8 @@
 
 \subsubsection{Check data balancing}
 
+The task is performed by a Data Analyst.
+
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.8\textwidth]{figures/check_data_balancing.png}
@@ -14,33 +16,33 @@
 \hline
 \textbf{Step} & \textbf{O} & \textbf{CL} & \textbf{S} & \textbf{SC} \\
 \hline
-\textbf{1} \textbf{ACTOR} opens "Check data balancing" form. & & & & \\
+\textbf{1} \textbf{ACTOR} opens "Check data balancing" form. & 1 & 1 & 1.15 & 1.15 \\
 \hline
 \textbf{2} \textbf{SYSTEM} shows the report. & & & & \\
 \hline
 \textbf{3} \textbf{SYSTEM} shows a hint whether the data is balanced or not. & & & & \\
 \hline
-\textbf{4} \textbf{ACTOR} checks threshold in the UI. & & & & \\
+\textbf{4} \textbf{ACTOR} checks threshold in the UI. & 1 & 2 & 1.15 & 2.30 \\
 \hline
-\textbf{5} \textbf{FOR EACH} column in the report: & & & & \\
+\textbf{5} \textbf{FOR EACH} column in the report: & 1 & & & \\
 \hline
-\textbf{5.1} \textbf{IF} the column is not within the displayed threshold. & & & & \\
+\textbf{5.1} \textbf{IF} the column is not within the displayed threshold. & 0.8 & & & \\
 \hline
-\textbf{5.1.1} \textbf{THEN} the data is not balanced. & & & & \\
+\textbf{5.1.1} \textbf{THEN} the data is not balanced. & 0.8 & & & \\
 \hline
-\textbf{6.1} \textbf{IF} the data is balanced. & & & & \\
+\textbf{6.1} \textbf{IF} the data is balanced. & 0.2 & & & \\
 \hline
-\textbf{6.1.1} \textbf{ACTOR} clicks "Balanced" button. & & & & \\
+\textbf{6.1.1} \textbf{ACTOR} clicks "Balanced" button. & 0.2 & 1 & 1.15 & 0.23 \\
 \hline
-\textbf{6.2} \textbf{ELSE} & & & & \\
+\textbf{6.2} \textbf{ELSE} & 0.8 & & & \\
 \hline
-\textbf{6.2.1} \textbf{ACTOR} clicks "Unbalanced" button. & & & & \\
+\textbf{6.2.1} \textbf{ACTOR} clicks "Unbalanced" button. & 0.8 & 1 & 1.15 & 0.92 \\
 \hline
 \textbf{7} \textbf{SYSTEM} shows a confirmation dialog. & & & & \\
 \hline
-\textbf{8} \textbf{ACTOR} closes the form. & & & & \\
+\textbf{8} \textbf{ACTOR} closes the form. & 1 & 1 & 1.15 & 1.15 \\
 \hline
-\multicolumn{4}{|r|}{Human task cost} & \\
+\multicolumn{4}{|r|}{Human task cost} & 5.75 \\
 \hline
 \end{tabularx}
 \caption{Detailed use case for "Check data balancing" task}
