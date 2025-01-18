@@ -5,49 +5,55 @@
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
         <mxCell id="d9Y5tQL2Cy0w6WRod0SP-66" value="Overfitting Tolerance:" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
-          <mxGeometry x="130" y="160" width="350" height="30" as="geometry" />
+          <mxGeometry x="130" y="160" width="440" height="30" as="geometry" />
         </mxCell>
         <mxCell id="d9Y5tQL2Cy0w6WRod0SP-67" value="0.10" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
-          <mxGeometry x="490" y="160" width="80" height="30" as="geometry" />
+          <mxGeometry x="580" y="160" width="80" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="caz_ZuM19BvxuGkym9Hg-4" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontColor=#333333;" vertex="1" parent="1">
-          <mxGeometry x="120" y="90" width="460" height="60" as="geometry" />
+        <mxCell id="caz_ZuM19BvxuGkym9Hg-4" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontColor=#333333;" parent="1" vertex="1">
+          <mxGeometry x="120" y="90" width="550" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="caz_ZuM19BvxuGkym9Hg-5" value="954" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+        <mxCell id="caz_ZuM19BvxuGkym9Hg-5" value="954" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
           <mxGeometry x="130" y="100" width="80" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="caz_ZuM19BvxuGkym9Hg-6" value="ID" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+        <mxCell id="caz_ZuM19BvxuGkym9Hg-6" value="ID" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
           <mxGeometry x="130" y="60" width="80" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="caz_ZuM19BvxuGkym9Hg-7" value="Valid MSE" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
-          <mxGeometry x="310" y="60" width="80" height="20" as="geometry" />
-        </mxCell>
-        <mxCell id="caz_ZuM19BvxuGkym9Hg-8" value="#Params" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="220" y="60" width="80" height="20" as="geometry" />
-        </mxCell>
-        <mxCell id="caz_ZuM19BvxuGkym9Hg-9" value="Delta MSE" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
-          <mxGeometry x="490" y="60" width="80" height="20" as="geometry" />
-        </mxCell>
-        <mxCell id="caz_ZuM19BvxuGkym9Hg-10" value="4000" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="220" y="100" width="80" height="40" as="geometry" />
-        </mxCell>
-        <mxCell id="caz_ZuM19BvxuGkym9Hg-11" value="0.14" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
-          <mxGeometry x="310" y="100" width="80" height="40" as="geometry" />
-        </mxCell>
-        <mxCell id="caz_ZuM19BvxuGkym9Hg-12" value="0.01" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
-          <mxGeometry x="490" y="100" width="80" height="40" as="geometry" />
-        </mxCell>
-        <mxCell id="caz_ZuM19BvxuGkym9Hg-14" value="0.15" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
-          <mxGeometry x="400" y="100" width="80" height="40" as="geometry" />
-        </mxCell>
-        <mxCell id="caz_ZuM19BvxuGkym9Hg-15" value="Test MSE" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+        <mxCell id="caz_ZuM19BvxuGkym9Hg-7" value="Valid MSE" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
           <mxGeometry x="400" y="60" width="80" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="caz_ZuM19BvxuGkym9Hg-17" value="Accept" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
-          <mxGeometry x="120" y="200" width="220" height="50" as="geometry" />
+        <mxCell id="caz_ZuM19BvxuGkym9Hg-8" value="Depth" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="220" y="60" width="80" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="caz_ZuM19BvxuGkym9Hg-18" value="Reject" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
-          <mxGeometry x="360" y="200" width="220" height="50" as="geometry" />
+        <mxCell id="caz_ZuM19BvxuGkym9Hg-9" value="Delta MSE" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
+          <mxGeometry x="580" y="60" width="80" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="caz_ZuM19BvxuGkym9Hg-10" value="3" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="220" y="100" width="80" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="caz_ZuM19BvxuGkym9Hg-11" value="0.14" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
+          <mxGeometry x="400" y="100" width="80" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="caz_ZuM19BvxuGkym9Hg-12" value="0.01" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
+          <mxGeometry x="580" y="100" width="80" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="caz_ZuM19BvxuGkym9Hg-14" value="0.15" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="1" vertex="1">
+          <mxGeometry x="490" y="100" width="80" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="caz_ZuM19BvxuGkym9Hg-15" value="Test MSE" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="1" vertex="1">
+          <mxGeometry x="490" y="60" width="80" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="caz_ZuM19BvxuGkym9Hg-17" value="Accept" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
+          <mxGeometry x="120" y="200" width="270" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="caz_ZuM19BvxuGkym9Hg-18" value="Reject" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" parent="1" vertex="1">
+          <mxGeometry x="400" y="200" width="270" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="eIAx3NDLDOJEH0mzNgCH-1" value="Neurons" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="310" y="60" width="80" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="eIAx3NDLDOJEH0mzNgCH-2" value="4000" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="310" y="100" width="80" height="40" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
