@@ -3,6 +3,12 @@
 \usepackage{multicol}
 \usepackage{float}
 \usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=cyan,
+}
 \usepackage{tabularx}
 \usepackage[a4paper, total={6in, 9in}]{geometry}
 
@@ -16,8 +22,9 @@ Zahra Omrani}
 
 \begin{document}
 \maketitle
+\tableofcontents
 
-\section{Task-level modeling}
+\input{chapters/bpmn_modeling.tex}
 \input{chapters/task_level_modeling.tex}
 
 \end{document}
