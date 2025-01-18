@@ -192,17 +192,15 @@
 \hline
 \textbf{5.1} \textbf{IF} the Best Model is not selected. & & & & \\
 \hline
-\textbf{5.1.1} \textbf{THEN} \textbf{ACTOR} clicks "Reject" button. & & & & \\
+\textbf{5.1.1} \textbf{ACTOR} clicks "Reject" button. & & & & \\
 \hline
-\textbf{5.2} \textbf{ELSE} & & & & \\
+\textbf{5.2} \textbf{ELSE IF} the Second Best Model is not selected or the Validation Loss of the Second Best Model is one order of magnitude greater than the Validation Loss of the Best Model. & & & & \\
 \hline
-\textbf{5.2.1.1} \textbf{IF} the Second Best Model is not selected or the Validation Loss of the Second Best Model is one order of magnitude greater than the Validation Loss of the Best Model. & & & & \\
+\textbf{5.2.1} \textbf{ACTOR} clicks on the Best Model. & & & & \\
 \hline
-\textbf{5.2.1.1.1} \textbf{ACTOR} clicks on the Best Model. & & & & \\
+\textbf{5.3} \textbf{ELSE} & & & & \\
 \hline
-\textbf{5.2.1.2} \textbf{ELSE} & & & & \\
-\hline
-\textbf{5.2.1.2.1} \textbf{ACTOR} clicks on the least complex model among the Best Model and the Second Best Model. & & & & \\
+\textbf{5.3.1} \textbf{ACTOR} clicks on the least complex model among the Best Model and the Second Best Model. & & & & \\
 \hline
 \textbf{6} \textbf{SYSTEM} shows a confirmation dialog. & & & & \\
 \hline
