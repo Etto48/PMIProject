@@ -1,3 +1,10 @@
 docs/.aux/**/*
+*.aux
+*.log
+*.out
+*.fls
+*.fdb_latexmk
+*.toc
+*.synctex.gz
 
 !docs/.aux/main.pdf
