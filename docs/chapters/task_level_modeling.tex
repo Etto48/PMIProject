@@ -72,6 +72,8 @@ The task is performed by a Data scientist.
 
 \subsubsection{Check input coverage}
 
+The task is performed by a Data scientist.
+
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.8\textwidth]{figures/check_input_coverage.png}
@@ -84,29 +86,29 @@ The task is performed by a Data scientist.
 \hline
 \textbf{Step} & \textbf{O} & \textbf{CL} & \textbf{S} & \textbf{SC} \\
 \hline
-\textbf{1} \textbf{ACTOR} opens "Check input coverage" form. & & & & \\
+\textbf{1} \textbf{ACTOR} opens "Check input coverage" form. & 1 & 1 & 2.37 & 2.37 \\
 \hline
 \textbf{2} \textbf{SYSTEM} shows a radar scatter plot of the input distribution. & & & & \\
 \hline
-\textbf{3} \textbf{FOR EACH} radius in the radar scatter plot: & & & & \\
+\textbf{3} \textbf{FOR EACH} radius in the radar scatter plot: & 5 & & & \\
 \hline
-\textbf{3.1} \textbf{IF} the distribution is not uniform as expected. & & & & \\
+\textbf{3.1} \textbf{IF} the distribution is not uniform as expected. & 3.33 & 4 & 2.37 & 31.57\\
 \hline
-\textbf{3.1.1} \textbf{THEN} the input coverage is not satisfied. & & & & \\
+\textbf{3.1.1} \textbf{THEN} the input coverage is not satisfied. & 3.33 & & & \\
 \hline
-\textbf{4.1} \textbf{IF} the input coverage is satisfied. & & & & \\
+\textbf{4.1} \textbf{IF} the input coverage is satisfied. & 0.33 & & & \\
 \hline
-\textbf{4.1.1} \textbf{ACTOR} clicks "Accept" button. & & & & \\
+\textbf{4.1.1} \textbf{ACTOR} clicks "Accept" button. & 0.33 & 1 & 2.37 & 0.79\\
 \hline
-\textbf{4.2} \textbf{ELSE} & & & & \\
+\textbf{4.2} \textbf{ELSE} & 0.66 & & & \\
 \hline
-\textbf{4.2.1} \textbf{ACTOR} clicks "Reject" button. & & & & \\
+\textbf{4.2.1} \textbf{ACTOR} clicks "Reject" button. & 0.66 & 1 & 2.37 & 1.57\\
 \hline
 \textbf{5} \textbf{SYSTEM} shows a confirmation dialog. & & & & \\
 \hline
-\textbf{6} \textbf{ACTOR} closes the form. & & & & \\
+\textbf{6} \textbf{ACTOR} closes the form. & 1 & 1 & 2.37 & 2.37 \\
 \hline
-\multicolumn{4}{|r|}{Human task cost} & \\
+\multicolumn{4}{|r|}{Human task cost} & 38.68\\
 \hline
 \end{tabularx}
 \caption{Detailed use case for "Check input coverage" task\\ 
