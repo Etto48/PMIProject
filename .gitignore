@@ -6,5 +6,7 @@ docs/.aux/**/*
 *.fdb_latexmk
 *.toc
 *.synctex.gz
+# Ignore the main.pdf if not in the .aux folder to avoid duplicates
+docs/main.pdf
 
 !docs/.aux/main.pdf
