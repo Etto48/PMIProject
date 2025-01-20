@@ -44,11 +44,11 @@ The task is performed by a Data Analyst.
 \hline
 \textbf{4} \textbf{ACTOR} checks threshold in the UI. & 1 & 2 & 1.15 & 2.30 \\
 \hline
-\textbf{5} \textbf{FOR EACH} column in the report: & 1 & & & \\
+\textbf{5} \textbf{FOR EACH} column in the report: & 5 & & & \\
 \hline
-\textbf{5.1} \textbf{IF} the column is not within the displayed threshold. & 0.8 & & & \\
+\textbf{5.1} \textbf{IF} the column is not within the displayed threshold. & 4 & & & \\
 \hline
-\textbf{5.1.1} \textbf{THEN} the data is not balanced. & 0.8 & & & \\
+\textbf{5.1.1} \textbf{THEN} the data is not balanced. & 4 & & & \\
 \hline
 \textbf{6.1} \textbf{IF} the data is balanced. & 0.2 & & & \\
 \hline
@@ -164,27 +164,27 @@ O - Occurrence, CL - Cognitive Level, S - Normalized Salary, SC - Step Cost}
 \hline
 \textbf{Step} & \textbf{O} & \textbf{CL} & \textbf{S} & \textbf{SC} \\
 \hline
-\textbf{1} \textbf{ACTOR} opens "Check training report" form. & & & & \\
+\textbf{1} \textbf{ACTOR} opens "Check training report" form. & 1 & 1 & 2.50 & 2.50 \\
 \hline
 \textbf{2} \textbf{SYSTEM} shows the training loss curve. & & & & \\
 \hline
-\textbf{3.1} \textbf{IF} the loss is flat for at least half of the iterations: & & & & \\
+\textbf{3.1} \textbf{IF} the loss is flat for at least half of the iterations: & 0.4 & 3 & 2.50 & 3.00 \\
 \hline
-\textbf{3.1.1} \textbf{THEN} \textbf{ACTOR} clicks "Overfit" button. & & & & \\
+\textbf{3.1.1} \textbf{THEN} \textbf{ACTOR} clicks "Overfit" button. & 0.4 & 1 & 2.50 & 1.00 \\
 \hline
-\textbf{3.2} \textbf{IF} the loss is not flat at the end of the iterations: & & & & \\
+\textbf{3.2} \textbf{IF} the loss is not flat at the end of the iterations: & 0.4 & 3 & 2.50 & 3.00 \\
 \hline
-\textbf{3.2.1} \textbf{THEN} \textbf{ACTOR} clicks "Underfit" button. & & & & \\
+\textbf{3.2.1} \textbf{THEN} \textbf{ACTOR} clicks "Underfit" button. & 0.4 & 1 & 2.50 & 1.00 \\
 \hline
-\textbf{3.3} \textbf{ELSE} & & & & \\
+\textbf{3.3} \textbf{ELSE} & 0.2 & 3 & 2.50 & 1.50 \\
 \hline
-\textbf{3.3.1} \textbf{ACTOR} clicks "Approved" button. & & & & \\
+\textbf{3.3.1} \textbf{ACTOR} clicks "Approved" button. & 0.2 & 1 & 2.50 & 0.50 \\
 \hline
 \textbf{4} \textbf{SYSTEM} shows a confirmation dialog. & & & & \\
 \hline
-\textbf{5} \textbf{ACTOR} closes the form. & & & & \\
+\textbf{5} \textbf{ACTOR} closes the form. & 1 & 1 & 2.50 & 2.50 \\
 \hline
-\multicolumn{4}{|r|}{Human task cost} & \\
+\multicolumn{4}{|r|}{Human task cost} & 15.00 \\
 \hline
 \end{tabularx}
 \caption{Detailed use case for "Check training report" task\\ 
