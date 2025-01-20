@@ -22,7 +22,7 @@ Domain expert (Neurologist) & \$267,000.00 & 5.13 \\
 
 \subsubsection{Check data balancing}
 
-The task is performed by a Data Analyst.
+The task is performed by a Data scientist.
 
 \begin{figure}[H]
 \centering
@@ -36,13 +36,13 @@ The task is performed by a Data Analyst.
 \hline
 \textbf{Step} & \textbf{O} & \textbf{CL} & \textbf{S} & \textbf{SC} \\
 \hline
-\textbf{1} \textbf{ACTOR} opens "Check data balancing" form. & 1 & 1 & 1.15 & 1.15 \\
+\textbf{1} \textbf{ACTOR} opens "Check data balancing" form. & 1 & 1 & 2.37 & 2.37 \\
 \hline
 \textbf{2} \textbf{SYSTEM} shows the report. & & & & \\
 \hline
 \textbf{3} \textbf{SYSTEM} shows a hint whether the data is balanced or not. & & & & \\
 \hline
-\textbf{4} \textbf{ACTOR} checks threshold in the UI. & 1 & 2 & 1.15 & 2.30 \\
+\textbf{4} \textbf{ACTOR} checks threshold in the UI. & 1 & 2 & 2.37 & 4.74 \\
 \hline
 \textbf{5} \textbf{FOR EACH} column in the report: & 5 & & & \\
 \hline
@@ -52,17 +52,17 @@ The task is performed by a Data Analyst.
 \hline
 \textbf{6.1} \textbf{IF} the data is balanced. & 0.2 & & & \\
 \hline
-\textbf{6.1.1} \textbf{ACTOR} clicks "Balanced" button. & 0.2 & 1 & 1.15 & 0.23 \\
+\textbf{6.1.1} \textbf{ACTOR} clicks "Balanced" button. & 0.2 & 1 & 2.37 & 0.47 \\
 \hline
 \textbf{6.2} \textbf{ELSE} & 0.8 & & & \\
 \hline
-\textbf{6.2.1} \textbf{ACTOR} clicks "Unbalanced" button. & 0.8 & 1 & 1.15 & 0.92 \\
+\textbf{6.2.1} \textbf{ACTOR} clicks "Unbalanced" button. & 0.8 & 1 & 2.37 & 1.90 \\
 \hline
 \textbf{7} \textbf{SYSTEM} shows a confirmation dialog. & & & & \\
 \hline
-\textbf{8} \textbf{ACTOR} closes the form. & 1 & 1 & 1.15 & 1.15 \\
+\textbf{8} \textbf{ACTOR} closes the form. & 1 & 1 & 2.37 & 2.37 \\
 \hline
-\multicolumn{4}{|r|}{Human task cost} & 5.75 \\
+\multicolumn{4}{|r|}{Human task cost} & 11.85 \\
 \hline
 \end{tabularx}
 \caption{Detailed use case for "Check data balancing" task\\ 
@@ -151,6 +151,8 @@ O - Occurrence, CL - Cognitive Level, S - Normalized Salary, SC - Step Cost}
 \end{table}
 
 \subsubsection{Check learning report}
+
+The task is performed by a ML engineer.
 
 \begin{figure}[H]
 \centering
