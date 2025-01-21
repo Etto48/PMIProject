@@ -2,18 +2,21 @@
 
 \begin{table}[H]
 \centering
-\begin{tabular}{|l|r|r|}
+\begin{tabularx}{\textwidth}{|l|X|r|r|}
 \hline
-\textbf{Position} & \textbf{Salary} & \textbf{Normalized Salary} \\
+\textbf{Position} & \textbf{Description} & \textbf{Salary} & \textbf{Normalized Salary} \\
 \hline
-Clerk & \$52,000.00 & 1.00 \\
-ML engineer & \$130,000.00 & 2.50 \\
-Data scientist & \$123,000.00 & 2.37 \\
-Domain expert (Neurologist) & \$267,000.00 & 5.13 \\
+Clerk & & \$52,000.00 & 1.00 \\
 \hline
-\textbf{Minimum} & \$52,000.00 & 1.00 \\
+ML engineer & & \$130,000.00 & 2.50 \\
 \hline
-\end{tabular}
+Data scientist & & \$123,000.00 & 2.37 \\
+\hline
+Domain expert (Neurologist) & & \$267,000.00 & 5.13 \\
+\hline
+\multicolumn{2}{|l|}{\textbf{Minimum}} & \$52,000.00 & 1.00 \\
+\hline
+\end{tabularx}
 \caption{Salary and normalized salary for each position}
 \label{table:salary}
 \end{table}
@@ -198,6 +201,8 @@ O - Occurrence, CL - Cognitive Level, S - Normalized Salary, SC - Step Cost}
 
 \subsubsection{Check validation report}
 
+This task is performed by a ML engineer.
+
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.8\textwidth]{figures/check_validation_report.png}
@@ -210,39 +215,39 @@ O - Occurrence, CL - Cognitive Level, S - Normalized Salary, SC - Step Cost}
 \hline
 \textbf{Step} & \textbf{O} & \textbf{CL} & \textbf{S} & \textbf{SC} \\
 \hline
-\textbf{1} \textbf{ACTOR} opens "Check validation report" form. & & & & \\
+\textbf{1} \textbf{ACTOR} opens "Check validation report" form. & 1 & 1 & 2.5 & 2.5 \\
 \hline
 \textbf{2} \textbf{SYSTEM} shows the best 5 models sorted by increasing Validation Loss. & & & & \\
 \hline
-\textbf{3} \textbf{FOR EACH} model in the list: & & & & \\
+\textbf{3} \textbf{FOR EACH} model in the list: & 5 & & & \\
 \hline
-\textbf{3.1} \textbf{IF} the model Validation Loss minus the Training Loss is less than the Overfitting Tolerance. & & & & \\
+\textbf{3.1} \textbf{IF} the model Validation Loss minus the Training Loss is less than the Overfitting Tolerance and the Best Model is not selected. & 1 & 2 & 2.5 & 5 \\
 \hline
-\textbf{3.1.1} \textbf{THEN} select the model as the Best Model. & & & & \\
+\textbf{3.1.1} \textbf{THEN} select the model as the Best Model. & 1 & 1 & 2.5 & 2.5 \\
 \hline
-\textbf{4} \textbf{FOR EACH} model in the list: & & & & \\
+\textbf{4} \textbf{FOR EACH} model in the list: & 4 & & & \\
 \hline
-\textbf{4.1} \textbf{IF} the model is not the Best Model and the Validation Loss minus the Training Loss is less than the Overfitting Tolerance. & & & & \\
+\textbf{4.1} \textbf{IF} the model is not the Best Model and the Validation Loss minus the Training Loss is less than the Overfitting Tolerance and the Second Best Model is not selected. & 1 & 2 & 2.5 & 5 \\
 \hline
-\textbf{4.1.1} \textbf{THEN} select the model as the Second Best Model. & & & & \\
+\textbf{4.1.1} \textbf{THEN} select the model as the Second Best Model. & 1 & 1 & 2.5 & 2.5 \\
 \hline
-\textbf{5.1} \textbf{IF} the Best Model is not selected. & & & & \\
+\textbf{5.1} \textbf{IF} the Best Model is not selected. & 0.05 & 1 & 2.5 & 0.125 \\
 \hline
-\textbf{5.1.1} \textbf{ACTOR} clicks "Reject" button. & & & & \\
+\textbf{5.1.1} \textbf{ACTOR} clicks "Reject" button. & 0.05 & 1 & 2.5 & 0.125\\
 \hline
-\textbf{5.2} \textbf{ELSE IF} the Second Best Model is not selected or the Validation Loss of the Second Best Model is one order of magnitude greater than the Validation Loss of the Best Model. & & & & \\
+\textbf{5.2} \textbf{ELSE IF} the Second Best Model is not selected or the Validation Loss of the Second Best Model is one order of magnitude greater than the Validation Loss of the Best Model. & 0.3 & 3 & 2.5 & 2.25 \\
 \hline
-\textbf{5.2.1} \textbf{ACTOR} clicks on the Best Model. & & & & \\
+\textbf{5.2.1} \textbf{ACTOR} clicks on the Best Model. & 0.3 & 1 & 2.5 & 0.75 \\
 \hline
-\textbf{5.3} \textbf{ELSE} & & & & \\
+\textbf{5.3} \textbf{ELSE} & 0.65 & 3 & 2.5 & 4.875 \\
 \hline
-\textbf{5.3.1} \textbf{ACTOR} clicks on the least complex model among the Best Model and the Second Best Model. & & & & \\
+\textbf{5.3.1} \textbf{ACTOR} clicks on the least complex model among the Best Model and the Second Best Model. & 0.65 & 3 & 2.5 & 4.875 \\
 \hline
 \textbf{6} \textbf{SYSTEM} shows a confirmation dialog. & & & & \\
 \hline
-\textbf{7} \textbf{ACTOR} closes the form. & & & & \\
+\textbf{7} \textbf{ACTOR} closes the form. & 1 & 1 & 2.5 & 2.5 \\
 \hline
-\multicolumn{4}{|r|}{Human task cost} & \\
+\multicolumn{4}{|r|}{Human task cost} & 32.91 \\
 \hline
 \end{tabularx}
 \caption{Detailed use case for "Check validation report" task\\ 
@@ -251,6 +256,8 @@ O - Occurrence, CL - Cognitive Level, S - Normalized Salary, SC - Step Cost}
 \end{table}
 
 \subsubsection{Check test results}
+
+This task is performed by a ML engineer.
 
 \begin{figure}[H]
 \centering
@@ -264,25 +271,25 @@ O - Occurrence, CL - Cognitive Level, S - Normalized Salary, SC - Step Cost}
 \hline
 \textbf{Step} & \textbf{O} & \textbf{CL} & \textbf{S} & \textbf{SC} \\
 \hline
-\textbf{1} \textbf{ACTOR} opens "Check test results" form. & & & & \\
+\textbf{1} \textbf{ACTOR} opens "Check test results" form. & 1 & 1 & 2.5 & 2.5 \\
 \hline
 \textbf{2} \textbf{SYSTEM} shows the test results. & & & & \\
 \hline
-\textbf{3} \textbf{ACTOR} checks if the difference between the test results and the validation results is within overfitting tolerance. & & & & \\
+\textbf{3} \textbf{ACTOR} checks if the difference between the test results and the validation results is within overfitting tolerance. & 1 & 2 & 2.5 & 5 \\
 \hline
-\textbf{4.1} \textbf{IF} the test results is not satisfactory. & & & & \\
+\textbf{4.1} \textbf{IF} the test results is not satisfactory. & 0.01 & & & \\
 \hline
-\textbf{4.1.1} \textbf{ACTOR} clicks "Reject" button. & & & & \\
+\textbf{4.1.1} \textbf{ACTOR} clicks "Reject" button. & 0.01 & 1 & 2.5 & 0.025 \\
 \hline
-\textbf{4.2} \textbf{ELSE} & & & & \\
+\textbf{4.2} \textbf{ELSE} & 0.99 & & & \\
 \hline
-\textbf{4.2.1} \textbf{ACTOR} clicks "Approve" button. & & & & \\
+\textbf{4.2.1} \textbf{ACTOR} clicks "Approve" button. & 0.99 & 1 & 2.5 & 2.475 \\
 \hline
 \textbf{5} \textbf{SYSTEM} shows a confirmation dialog. & & & & \\
 \hline
-\textbf{6} \textbf{ACTOR} closes the form. & & & & \\
+\textbf{6} \textbf{ACTOR} closes the form. & 1 & 1 & 2.5 & 2.5 \\
 \hline
-\multicolumn{4}{|r|}{Human task cost} & \\
+\multicolumn{4}{|r|}{Human task cost} & 12.5 \\
 \hline
 \end{tabularx}
 \caption{Detailed use case for "Check test results" task\\ 
