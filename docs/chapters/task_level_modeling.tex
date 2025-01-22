@@ -25,7 +25,7 @@ Domain expert (Neurologist) & & \$267,000.00 & 5.13 \\
 
 \subsubsection{Check data balancing}
 
-The task is performed by a Data scientist.
+The task is performed by a Data Analyst.
 
 \begin{figure}[H]
 \centering
@@ -39,13 +39,13 @@ The task is performed by a Data scientist.
 \hline
 \textbf{Step} & \textbf{O} & \textbf{CL} & \textbf{S} & \textbf{SC} \\
 \hline
-\textbf{1} \textbf{ACTOR} opens "Check data balancing" form. & 1 & 1 & 2.37 & 2.37 \\
+\textbf{1} \textbf{ACTOR} opens "Check data balancing" form. & 1 & 1 & 1.15 & 1.15 \\
 \hline
 \textbf{2} \textbf{SYSTEM} shows the report. & & & & \\
 \hline
 \textbf{3} \textbf{SYSTEM} shows a hint whether the data is balanced or not. & & & & \\
 \hline
-\textbf{4} \textbf{ACTOR} checks threshold in the UI. & 1 & 2 & 2.37 & 4.74 \\
+\textbf{4} \textbf{ACTOR} checks threshold in the UI. & 1 & 2 & 1.15 & 2.30 \\
 \hline
 \textbf{5} \textbf{FOR EACH} column in the report: & 5 & & & \\
 \hline
@@ -55,17 +55,17 @@ The task is performed by a Data scientist.
 \hline
 \textbf{6.1} \textbf{IF} the data is balanced. & 0.2 & & & \\
 \hline
-\textbf{6.1.1} \textbf{ACTOR} clicks "Balanced" button. & 0.2 & 1 & 2.37 & 0.47 \\
+\textbf{6.1.1} \textbf{ACTOR} clicks "Balanced" button. & 0.2 & 1 & 1.15 & 0.23 \\
 \hline
 \textbf{6.2} \textbf{ELSE} & 0.8 & & & \\
 \hline
-\textbf{6.2.1} \textbf{ACTOR} clicks "Unbalanced" button. & 0.8 & 1 & 2.37 & 1.90 \\
+\textbf{6.2.1} \textbf{ACTOR} clicks "Unbalanced" button. & 0.8 & 1 & 1.15 & 0.92 \\
 \hline
 \textbf{7} \textbf{SYSTEM} shows a confirmation dialog. & & & & \\
 \hline
-\textbf{8} \textbf{ACTOR} closes the form. & 1 & 1 & 2.37 & 2.37 \\
+\textbf{8} \textbf{ACTOR} closes the form. & 1 & 1 & 1.15 & 1.15 \\
 \hline
-\multicolumn{4}{|r|}{Human task cost} & 11.85 \\
+\multicolumn{4}{|r|}{Human task cost} & 5.75 \\
 \hline
 \end{tabularx}
 \caption{Detailed use case for "Check data balancing" task\\ 
@@ -75,7 +75,7 @@ The task is performed by a Data scientist.
 
 \subsubsection{Check input coverage}
 
-The task is performed by a Data scientist.
+The task is performed by a Data Analyst.
 
 \begin{figure}[H]
 \centering
@@ -89,29 +89,29 @@ The task is performed by a Data scientist.
 \hline
 \textbf{Step} & \textbf{O} & \textbf{CL} & \textbf{S} & \textbf{SC} \\
 \hline
-\textbf{1} \textbf{ACTOR} opens "Check input coverage" form. & 1 & 1 & 2.37 & 2.37 \\
+\textbf{1} \textbf{ACTOR} opens "Check input coverage" form. & 1 & 1 & 1.15 & 1.15 \\
 \hline
 \textbf{2} \textbf{SYSTEM} shows a radar scatter plot of the input distribution. & & & & \\
 \hline
 \textbf{3} \textbf{FOR EACH} radius in the radar scatter plot: & 5 & & & \\
 \hline
-\textbf{3.1} \textbf{IF} the distribution is not uniform as expected. & 3.33 & 4 & 2.37 & 31.57\\
+\textbf{3.1} \textbf{IF} the distribution is not uniform as expected. & 3.33 & 4 & 1.15 & 15.32\\
 \hline
 \textbf{3.1.1} \textbf{THEN} the input coverage is not satisfied. & 3.33 & & & \\
 \hline
 \textbf{4.1} \textbf{IF} the input coverage is satisfied. & 0.33 & & & \\
 \hline
-\textbf{4.1.1} \textbf{ACTOR} clicks "Accept" button. & 0.33 & 1 & 2.37 & 0.79\\
+\textbf{4.1.1} \textbf{ACTOR} clicks "Accept" button. & 0.33 & 1 & 1.15 & 0.38\\
 \hline
 \textbf{4.2} \textbf{ELSE} & 0.66 & & & \\
 \hline
-\textbf{4.2.1} \textbf{ACTOR} clicks "Reject" button. & 0.66 & 1 & 2.37 & 1.57\\
+\textbf{4.2.1} \textbf{ACTOR} clicks "Reject" button. & 0.66 & 1 & 1.15 & 0.77\\
 \hline
 \textbf{5} \textbf{SYSTEM} shows a confirmation dialog. & & & & \\
 \hline
-\textbf{6} \textbf{ACTOR} closes the form. & 1 & 1 & 2.37 & 2.37 \\
+\textbf{6} \textbf{ACTOR} closes the form. & 1 & 1 & 1.15 & 1.15 \\
 \hline
-\multicolumn{4}{|r|}{Human task cost} & 38.68\\
+\multicolumn{4}{|r|}{Human task cost} & 18.77\\
 \hline
 \end{tabularx}
 \caption{Detailed use case for "Check input coverage" task\\ 
