@@ -318,35 +318,36 @@ O - Occurrence, CL - Cognitive Level, S - Normalized Salary, SC - Step Cost}
 \end{figure}
 
 \begin{table}[H]
-\centering
-\begin{tabularx}{\textwidth}{|X|c|c|c|c|}
-\hline
-\textbf{Step} & \textbf{O} & \textbf{CL} & \textbf{S} & \textbf{SC} \\
-\hline
-\textbf{1} \textbf{ACTOR} opens the "Evaluate Classifier Performance" form. & 1 & 1 & 1.15 & 1.15 \\
-\hline
-\textbf{2} \textbf{SYSTEM} displays a table of sessions with Expert Label (ground truth) and Classifier Label (predicted label). 
-The difference between the labels (if any) represents an error. & & & & \\
-\hline
-\textbf{3} \textbf{ACTOR} reviews the table. & 1 & 4 & 1.15 & 4.60\\
-\hline
-\textbf{3.1} \textbf{IF} the total errors or consecutive errors exceed their respective thresholds: & 1 & 2 & 1.15 & 2.30 \\
-\hline
-\textbf{3.1.1} \textbf{ACTOR} clicks the "Fail" button. &0.5 & 1& 1.5&2.30 \\
-\hline
-\textbf{3.2} \textbf{ELSE} & & & & \\
-\hline
-\textbf{3.2.1} \textbf{ACTOR} clicks the "Pass" button. &0.5 &1 & 1.5&0.575 \\
-\hline
-\textbf{4} \textbf{SYSTEM} shows a confirmation dialog. & & & & \\
-\hline
-\textbf{5} \textbf{ACTOR} closes the form. &1 &1 &1.15 & 1.15\\
-\hline
-\multicolumn{4}{|r|}{Human task cost} &9.35 \\
-\hline
-\end{tabularx}
-\caption{Detailed use case for "Evaluate Classifier Performance" task\\ 
-O - Occurrence, CL - Cognitive Level, S - Normalized Salary, SC - Step Cost}
-\label{table:evaluate_classifier_performance}
-\end{table}
+    \centering
+    \begin{tabularx}{\textwidth}{|X|c|c|c|c|}
+    \hline
+    \textbf{Step} & \textbf{O} & \textbf{CL} & \textbf{S} & \textbf{SC} \\
+    \hline
+    \textbf{1} \textbf{ACTOR} opens the "Evaluate Classifier Performance" form. & 1 & 1 & 1.15 & 1.15 \\
+    \hline
+    \textbf{2} \textbf{SYSTEM} displays a table of sessions with Expert Label (ground truth) and Classifier Label (predicted label). 
+    The difference between the labels (if any) represents an error. & & & & \\
+    \hline
+    \textbf{3} \textbf{ACTOR} reviews the table. & 1 & 4 & 1.15 & 4.60\\
+    \hline
+    \textbf{3.1} \textbf{IF} the total errors or consecutive errors exceed their respective thresholds: & 1 & 2 & 1.15 & 2.30 \\
+    \hline
+    \textbf{3.1.1} \textbf{ACTOR} clicks the "Fail" button. &0.5 & 1& 1.5&2.30 \\
+    \hline
+    \textbf{3.2} \textbf{ELSE} & & & & \\
+    \hline
+    \textbf{3.2.1} \textbf{ACTOR} clicks the "Pass" button. &0.5 &1 & 1.5&0.575 \\
+    \hline
+    \textbf{4} \textbf{SYSTEM} shows a confirmation dialog. & & & & \\
+    \hline
+    \textbf{5} \textbf{ACTOR} closes the form. &1 &1 &1.15 & 1.15\\
+    \hline
+    \multicolumn{4}{|r|}{Human task cost} &9.35 \\
+    \hline
+    \end{tabularx}
+    \caption{Detailed use case for "Evaluate Classifier Performance" task\\ 
+    O - Occurrence, CL - Cognitive Level, S - Normalized Salary, SC - Step Cost}
+    \label{table:evaluate_classifier_performance}
+    \end{table}
+    
     
