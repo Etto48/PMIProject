@@ -1,4 +1,5 @@
 docs/.aux/**/*
+.venv/
 *.aux
 *.log
 *.out
