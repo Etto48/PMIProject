@@ -2,24 +2,19 @@
 
 \begin{table}[H]
 \centering
-\begin{tabularx}{\textwidth}{|p{2.5cm}|X|l|m{2cm}|}
+\begin{tabularx}{\textwidth}{|l|X|r|r|}
 \hline
 \textbf{Position} & \textbf{Description} & \textbf{Salary} & \textbf{Normalized Salary} \\
 \hline
-Clerk & Handles administrative tasks, organizes documentation, and assists with data entry and labeling.
-Ensures smooth operations by coordinating communication and managing resources. & \$52,000.00 & 1.00 \\
+Clerk & & \$52,000.00 & 1.00 \\
 \hline
-Data analyst & Prepares, analyzes, and visualizes data to extract insights. 
-Collaborates on cleaning datasets, identifying trends, and supporting model validation. & \$60,000.00 & 1.15 \\
+Data analyst & & \$60,000.00 & 1.15 \\
 \hline
-ML engineer & Builds, tests, and deploys machine learning models, optimizing performance and scalability. 
-Integrates AI solutions into production systems with a focus on efficiency. & \$130,000.00 & 2.50 \\
+ML engineer & & \$130,000.00 & 2.50 \\
 \hline
-Data scientist & Designs and experiments with AI models, applying advanced techniques to solve project challenges. 
-Collaborates with experts to integrate domain knowledge and refine outputs. & \$123,000.00 & 2.37 \\
+Data scientist & & \$123,000.00 & 2.37 \\
 \hline
-Domain expert (Neurologist) & Provides medical expertise to guide AI development and validate results. 
-Ensures solutions align with clinical standards and address neurological challenges. & \$267,000.00 & 5.13 \\
+Domain expert (Neurologist) & & \$267,000.00 & 5.13 \\
 \hline
 \multicolumn{2}{|l|}{\textbf{Minimum}} & \$52,000.00 & 1.00 \\
 \hline
@@ -126,6 +121,38 @@ O - Occurrence, CL - Cognitive Level, S - Normalized Salary, SC - Step Cost}
 \label{table:check_input_coverage}
 \end{table}
 
+\subsubsection{Configure Segregation System}
+This task is performed by a ML Engineer.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.8\textwidth]{docs/figures/ui_configure_segregation.png}
+\caption{"Configure Segregation System" mock-up form}
+\end{figure}
+
+\begin{table}[H]
+\centering
+\begin{tabularx}{\textwidth}{|X|c|c|c|c|}
+\hline
+\textbf{Step} & \textbf{O} & \textbf{CL} & \textbf{S} & \textbf{SC} \\
+\hline
+\textbf{1} \textbf{ACTOR} opens the "Configure Segregation System" form. &  & & & \\
+\hline
+\textbf{2} \textbf{SYSTEM} displays the current configuration and the "Upload" button.& & & & \\
+\hline
+\textbf{3} \textbf{ACTOR} push the "Upload" button and upload the configuration file. & & & &\\
+\hline
+\textbf{4} \textbf{SYSTEM} shows a confirmation message. & & & & \\
+\hline
+\textbf{5} \textbf{ACTOR} closes the form. & & & & \\
+\hline
+\multicolumn{4}{|r|}{Human task cost} & \\
+\hline
+\end{tabularx}
+\caption{Detailed use case for "Configure Segregation" task\\ 
+O - Occurrence, CL - Cognitive Level, S - Normalized Salary, SC - Step Cost}
+\label{table:configure_client_side}
+\end{table}
 \subsection{Development system}
 
 \subsubsection{Set iteration number}
@@ -307,9 +334,42 @@ O - Occurrence, CL - Cognitive Level, S - Normalized Salary, SC - Step Cost}
 \end{table}
 
 
+\subsubsection{Configure Development System}
+This task is performed by a ML Engineer.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.8\textwidth]{docs/figures/ui_configure_development.png}
+\caption{"Configure Development System" mock-up form}
+\end{figure}
+
+\begin{table}[H]
+\centering
+\begin{tabularx}{\textwidth}{|X|c|c|c|c|}
+\hline
+\textbf{Step} & \textbf{O} & \textbf{CL} & \textbf{S} & \textbf{SC} \\
+\hline
+\textbf{1} \textbf{ACTOR} opens the "Configure Development System" form. &  & & & \\
+\hline
+\textbf{2} \textbf{SYSTEM} displays the current configuration and the "Upload" button.& & & & \\
+\hline
+\textbf{3} \textbf{ACTOR} push the "Upload" button and upload the configuration file. & & & &\\
+\hline
+\textbf{4} \textbf{SYSTEM} shows a confirmation message. & & & & \\
+\hline
+\textbf{5} \textbf{ACTOR} closes the form. & & & & \\
+\hline
+\multicolumn{4}{|r|}{Human task cost} & \\
+\hline
+\end{tabularx}
+\caption{Detailed use case for "Configure Development" task\\ 
+O - Occurrence, CL - Cognitive Level, S - Normalized Salary, SC - Step Cost}
+\label{table:configure_client_side}
+\end{table}
 \subsection{Evaluation system}
 
 \subsubsection{Evaluate classifier performance}
+This task is performed by a Data Analyst.
 
 \begin{figure}[H]
 \centering
@@ -318,69 +378,215 @@ O - Occurrence, CL - Cognitive Level, S - Normalized Salary, SC - Step Cost}
 \end{figure}
 
 \begin{table}[H]
-    \centering
-    \begin{tabularx}{\textwidth}{|X|c|c|c|c|}
-    \hline
-    \textbf{Step} & \textbf{O} & \textbf{CL} & \textbf{S} & \textbf{SC} \\
-    \hline
-    \textbf{1} \textbf{ACTOR} opens the "Evaluate Classifier Performance" form. & 1 & 1 & 1.15 & 1.15 \\
-    \hline
-    \textbf{2} \textbf{SYSTEM} displays a table of sessions with Expert Label (ground truth) and Classifier Label (predicted label). 
-    The difference between the labels (if any) represents an error. & & & & \\
-    \hline
-    \textbf{3} \textbf{ACTOR} reviews the table. & 1 & 4 & 1.15 & 4.60\\
-    \hline
-    \textbf{3.1} \textbf{IF} the total errors or consecutive errors exceed their respective thresholds: & 1 & 2 & 1.15 & 2.30 \\
-    \hline
-    \textbf{3.1.1} \textbf{ACTOR} clicks the "Fail" button. &0.5 & 1& 1.5&2.30 \\
-    \hline
-    \textbf{3.2} \textbf{ELSE} & & & & \\
-    \hline
-    \textbf{3.2.1} \textbf{ACTOR} clicks the "Pass" button. &0.5 &1 & 1.5&0.575 \\
-    \hline
-    \textbf{4} \textbf{SYSTEM} shows a confirmation dialog. & & & & \\
-    \hline
-    \textbf{5} \textbf{ACTOR} closes the form. &1 &1 &1.15 & 1.15\\
-    \hline
-    \multicolumn{4}{|r|}{Human task cost} &9.35 \\
-    \hline
-    \end{tabularx}
-    \caption{Detailed use case for "Evaluate Classifier Performance" task\\ 
-    O - Occurrence, CL - Cognitive Level, S - Normalized Salary, SC - Step Cost}
-    \label{table:evaluate_classifier_performance}
-    \end{table}
-    \subsection{Client-Side Systems}
+\centering
+\begin{tabularx}{\textwidth}{|X|c|c|c|c|}
+\hline
+\textbf{Step} & \textbf{O} & \textbf{CL} & \textbf{S} & \textbf{SC} \\
+\hline
+\textbf{1} \textbf{ACTOR} opens the "Evaluate Classifier Performance" form. & 1 & 1 & 1.15 & 1.15 \\
+\hline
+\textbf{2} \textbf{SYSTEM} displays a table of sessions with Expert Label (ground truth) and Classifier Label (predicted label). 
+The difference between the labels (if any) represents an error. & & & & \\
+\hline
+\textbf{3} \textbf{ACTOR} reviews the table. & 1 & 4 & 1.15 & 4.60\\
+\hline
+\textbf{3.1} \textbf{IF} the total errors or consecutive errors exceed their respective thresholds: & 1 & 2 & 1.15 & 2.30 \\
+\hline
+\textbf{3.1.1} \textbf{ACTOR} clicks the "Fail" button. &0.5 & 1& 1.5&2.30 \\
+\hline
+\textbf{3.2} \textbf{ELSE} & & & & \\
+\hline
+\textbf{3.2.1} \textbf{ACTOR} clicks the "Pass" button. &0.5 &1 & 1.5&0.575 \\
+\hline
+\textbf{4} \textbf{SYSTEM} shows a confirmation dialog. & & & & \\
+\hline
+\textbf{5} \textbf{ACTOR} closes the form. &1 &1 &1.15 & 1.15\\
+\hline
+\multicolumn{4}{|r|}{Human task cost} &9.35 \\
+\hline
+\end{tabularx}
+\caption{Detailed use case for "Evaluate Classifier Performance" task\\ 
+O - Occurrence, CL - Cognitive Level, S - Normalized Salary, SC - Step Cost}
+\label{table:evaluate_classifier_performance}
+\end{table}
 
-    \subsubsection{Configure Client-Side Systems}
-    This task is performed by a ML Engineer.
-    
-    \begin{figure}[H]
-    \centering
-    \includegraphics[width=0.8\textwidth]{figures/ui_configure_client-side.png}
-    \caption{"Configure Client-Side Systems" mock-up form}
-    \end{figure}
-    
-    \begin{table}[H]
-    \centering
-    \begin{tabularx}{\textwidth}{|X|c|c|c|c|}
-    \hline
-    \textbf{Step} & \textbf{O} & \textbf{CL} & \textbf{S} & \textbf{SC} \\
-    \hline
-    \textbf{1} \textbf{ACTOR} opens the "Configure Client-Side System" form. &  & & & \\
-    \hline
-    \textbf{2} \textbf{SYSTEM} displays the "Upload" button.& & & & \\
-    \hline
-    \textbf{3} \textbf{ACTOR} push the "Upload" button and upload the configuration file. & & & &\\
-    \hline
-    \textbf{4} \textbf{SYSTEM}shows a confirmation message. & & & & \\
-    \hline
-    \textbf{5} \textbf{ACTOR} closes the form. & & & & \\
-    \hline
-    \multicolumn{4}{|r|}{Human task cost} & \\
-    \hline
-    \end{tabularx}
-    \caption{Detailed use case for "Evaluate Classifier Performance" task\\ 
-    O - Occurrence, CL - Cognitive Level, S - Normalized Salary, SC - Step Cost}
-    \label{table:configure_client_side}
-    \end{table}  
-    
+\subsubsection{Configure Evaluation System}
+This task is performed by a ML Engineer.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.8\textwidth]{docs/figures/ui_configure_evaluation.png}
+\caption{"Configure Evaluation System" mock-up form}
+\end{figure}
+
+\begin{table}[H]
+\centering
+\begin{tabularx}{\textwidth}{|X|c|c|c|c|}
+\hline
+\textbf{Step} & \textbf{O} & \textbf{CL} & \textbf{S} & \textbf{SC} \\
+\hline
+\textbf{1} \textbf{ACTOR} opens the "Configure Evaluation System" form. &  & & & \\
+\hline
+\textbf{2} \textbf{SYSTEM} displays the current configuration and the "Upload" button.& & & & \\
+\hline
+\textbf{3} \textbf{ACTOR} push the "Upload" button and upload the configuration file. & & & &\\
+\hline
+\textbf{4} \textbf{SYSTEM} shows a confirmation message. & & & & \\
+\hline
+\textbf{5} \textbf{ACTOR} closes the form. & & & & \\
+\hline
+\multicolumn{4}{|r|}{Human task cost} & \\
+\hline
+\end{tabularx}
+\caption{Detailed use case for "Configure Evaluation" task\\ 
+O - Occurrence, CL - Cognitive Level, S - Normalized Salary, SC - Step Cost}
+\label{table:configure_client_side}
+\end{table}
+
+\subsection{Client-Side Systems}
+
+\subsubsection{Configure Client-Side Systems}
+This task is performed by a ML Engineer.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.8\textwidth]{docs/figures/ui_configure_client-side.png}
+\caption{"Configure Client-Side Systems" mock-up form}
+\end{figure}
+
+\begin{table}[H]
+\centering
+\begin{tabularx}{\textwidth}{|X|c|c|c|c|}
+\hline
+\textbf{Step} & \textbf{O} & \textbf{CL} & \textbf{S} & \textbf{SC} \\
+\hline
+\textbf{1} \textbf{ACTOR} opens the "Configure Client-Side System" form. &  & & & \\
+\hline
+\textbf{2} \textbf{SYSTEM} displays the "Upload" button.& & & & \\
+\hline
+\textbf{3} \textbf{ACTOR} push the "Upload" button and upload the configuration file. & & & &\\
+\hline
+\textbf{4} \textbf{SYSTEM} shows a confirmation message. & & & & \\
+\hline
+\textbf{5} \textbf{ACTOR} closes the form. & & & & \\
+\hline
+\multicolumn{4}{|r|}{Human task cost} & \\
+\hline
+\end{tabularx}
+\caption{Detailed use case for "Configure Client-Side Systems" task\\ 
+O - Occurrence, CL - Cognitive Level, S - Normalized Salary, SC - Step Cost}
+\label{table:configure_client_side}
+\end{table}
+
+
+\subsection{Production System}
+
+\subsubsection{Configure Production Systems}
+This task is performed by a ML Engineer.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.8\textwidth]{docs/figures/ui_configure_production.png}
+\caption{"Configure Production System" mock-up form}
+\end{figure}
+
+\begin{table}[H]
+\centering
+\begin{tabularx}{\textwidth}{|X|c|c|c|c|}
+\hline
+\textbf{Step} & \textbf{O} & \textbf{CL} & \textbf{S} & \textbf{SC} \\
+\hline
+\textbf{1} \textbf{ACTOR} opens the "Configure Production System" form. &  & & & \\
+\hline
+\textbf{2} \textbf{SYSTEM} displays the "Upload" button.& & & & \\
+\hline
+\textbf{3} \textbf{ACTOR} push the "Upload" button and upload the configuration file. & & & &\\
+\hline
+\textbf{4} \textbf{SYSTEM} shows a confirmation message. & & & & \\
+\hline
+\textbf{5} \textbf{ACTOR} closes the form. & & & & \\
+\hline
+\multicolumn{4}{|r|}{Human task cost} & \\
+\hline
+\end{tabularx}
+\caption{Detailed use case for "Configure Production" task\\ 
+O - Occurrence, CL - Cognitive Level, S - Normalized Salary, SC - Step Cost}
+\label{table:configure_client_side}
+\end{table}
+
+
+
+\subsection{Ingestion System}
+
+\subsubsection{Configure Ingestion System}
+This task is performed by a ML Engineer.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.8\textwidth]{docs/figures/ui_configure_ingestion.png}
+\caption{"Configure Ingestion System" mock-up form}
+\end{figure}
+
+\begin{table}[H]
+\centering
+\begin{tabularx}{\textwidth}{|X|c|c|c|c|}
+\hline
+\textbf{Step} & \textbf{O} & \textbf{CL} & \textbf{S} & \textbf{SC} \\
+\hline
+\textbf{1} \textbf{ACTOR} opens the "Configure Ingestion System" form. &  & & & \\
+\hline
+\textbf{2} \textbf{SYSTEM} displays the current configuration and the "Upload" button.& & & & \\
+\hline
+\textbf{3} \textbf{ACTOR} push the "Upload" button and upload the configuration file. & & & &\\
+\hline
+\textbf{4} \textbf{SYSTEM} shows a confirmation message. & & & & \\
+\hline
+\textbf{5} \textbf{ACTOR} closes the form. & & & & \\
+\hline
+\multicolumn{4}{|r|}{Human task cost} & \\
+\hline
+\end{tabularx}
+\caption{Detailed use case for "Configure Ingestion" task\\ 
+O - Occurrence, CL - Cognitive Level, S - Normalized Salary, SC - Step Cost}
+\label{table:configure_client_side}
+\end{table}
+
+
+
+
+
+
+\subsection{Preparation System}
+
+\subsubsection{Configure Preparation System}
+This task is performed by a ML Engineer.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.8\textwidth]{docs/figures/ui_configure_preparation.png}
+\caption{"Configure Preparation System" mock-up form}
+\end{figure}
+
+\begin{table}[H]
+\centering
+\begin{tabularx}{\textwidth}{|X|c|c|c|c|}
+\hline
+\textbf{Step} & \textbf{O} & \textbf{CL} & \textbf{S} & \textbf{SC} \\
+\hline
+\textbf{1} \textbf{ACTOR} opens the "Configure Preparation System" form. &  & & & \\
+\hline
+\textbf{2} \textbf{SYSTEM} displays the current configuration and the "Upload" button.& & & & \\
+\hline
+\textbf{3} \textbf{ACTOR} push the "Upload" button and upload the configuration file. & & & &\\
+\hline
+\textbf{4} \textbf{SYSTEM} shows a confirmation message. & & & & \\
+\hline
+\textbf{5} \textbf{ACTOR} closes the form. & & & & \\
+\hline
+\multicolumn{4}{|r|}{Human task cost} & \\
+\hline
+\end{tabularx}
+\caption{Detailed use case for "Configure Preparation" task\\ 
+O - Occurrence, CL - Cognitive Level, S - Normalized Salary, SC - Step Cost}
+\label{table:configure_client_side}
+\end{table}
