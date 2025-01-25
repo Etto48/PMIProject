@@ -2,7 +2,7 @@
 
 \begin{table}[H]
 \centering
-\begin{tabularx}{\textwidth}{|p{2.5cm}|X|l|m{2cm}|}
+\begin{tabularx}{\textwidth}{|p{2.3cm}|X|l|m{2.2cm}|}
 \hline
 \textbf{Position} & \textbf{Description} & \textbf{Salary} & \textbf{Normalized Salary} \\
 \hline
@@ -52,27 +52,21 @@ The task is performed by a Data Analyst.
 \hline
 \textbf{3} \textbf{SYSTEM} shows a hint whether the data is balanced or not. & & & & \\
 \hline
-\textbf{4} \textbf{ACTOR} checks threshold in the UI. & 1 & 2 & 1.15 & 2.30 \\
+\textbf{4} \textbf{ACTOR} checks the hint to see if the data is balanced or not. & 1 & 2 & 1.15 & 2.30 \\
 \hline
-\textbf{5} \textbf{FOR EACH} column in the report: & 5 & & & \\
+\textbf{5.1} \textbf{IF} the data is balanced. & 0.2 & & & \\
 \hline
-\textbf{5.1} \textbf{IF} the column is not within the displayed threshold. & 4 & & & \\
+\textbf{5.1.1} \textbf{ACTOR} clicks "Balanced" button. & 0.2 & 1 & 1.15 & 0.23 \\
 \hline
-\textbf{5.1.1} \textbf{THEN} the data is not balanced. & 4 & & & \\
+\textbf{5.2} \textbf{ELSE} & 0.8 & & & \\
 \hline
-\textbf{6.1} \textbf{IF} the data is balanced. & 0.2 & & & \\
-\hline
-\textbf{6.1.1} \textbf{ACTOR} clicks "Balanced" button. & 0.2 & 1 & 1.15 & 0.23 \\
-\hline
-\textbf{6.2} \textbf{ELSE} & 0.8 & & & \\
-\hline
-\textbf{6.2.1} \textbf{ACTOR} clicks "Unbalanced" button. & 0.8 & 1 & 1.15 & 0.92 \\
+\textbf{5.2.1} \textbf{ACTOR} clicks "Unbalanced" button. & 0.8 & 1 & 1.15 & 0.92 \\
 \hline
 \textbf{7} \textbf{SYSTEM} shows a confirmation dialog. & & & & \\
 \hline
 \textbf{8} \textbf{ACTOR} closes the form. & 1 & 1 & 1.15 & 1.15 \\
 \hline
-\multicolumn{4}{|r|}{Human task cost} & 5.75 \\
+\multicolumn{4}{|r|}{Human task cost} & 5.74 \\
 \hline
 \end{tabularx}
 \caption{Detailed use case for "Check data balancing" task\\ 
@@ -100,25 +94,27 @@ The task is performed by a Data Analyst.
 \hline
 \textbf{2} \textbf{SYSTEM} shows a radar scatter plot of the input distribution. & & & & \\
 \hline
-\textbf{3} \textbf{FOR EACH} radius in the radar scatter plot: & 5 & & & \\
+\textbf{3} \textbf{FOR EACH} radius in the radar scatter plot: & 6 & & & \\
 \hline
-\textbf{3.1} \textbf{IF} the distribution is not uniform as expected. & 3.33 & 4 & 1.15 & 15.32\\
+\textbf{3.1} \textbf{ACTOR} checks if the distribution is uniform on the radius. & 6 & 4 & 1.15 & 27.6 \\
 \hline
-\textbf{3.1.1} \textbf{THEN} the input coverage is not satisfied. & 3.33 & & & \\
+\textbf{3.1.1} \textbf{IF} the distribution is not uniform as expected. & 4 & & & \\
+\hline
+\textbf{3.1.1.1} \textbf{THEN} the input coverage is not satisfied. & 4 & & & \\
 \hline
 \textbf{4.1} \textbf{IF} the input coverage is satisfied. & 0.33 & & & \\
 \hline
-\textbf{4.1.1} \textbf{ACTOR} clicks "Accept" button. & 0.33 & 1 & 1.15 & 0.38\\
+\textbf{4.1.1} \textbf{ACTOR} clicks "Accept" button. & 0.33 & 1 & 1.15 & 0.38 \\
 \hline
 \textbf{4.2} \textbf{ELSE} & 0.66 & & & \\
 \hline
-\textbf{4.2.1} \textbf{ACTOR} clicks "Reject" button. & 0.66 & 1 & 1.15 & 0.77\\
+\textbf{4.2.1} \textbf{ACTOR} clicks "Reject" button. & 0.66 & 1 & 1.15 & 0.76 \\
 \hline
 \textbf{5} \textbf{SYSTEM} shows a confirmation dialog. & & & & \\
 \hline
 \textbf{6} \textbf{ACTOR} closes the form. & 1 & 1 & 1.15 & 1.15 \\
 \hline
-\multicolumn{4}{|r|}{Human task cost} & 18.77\\
+\multicolumn{4}{|r|}{Human task cost} & 31.04 \\
 \hline
 \end{tabularx}
 \caption{Detailed use case for "Check input coverage" task\\ 
@@ -168,6 +164,7 @@ This task is performed by a ML Engineer.
 O - Occurrence, CL - Cognitive Level, S - Normalized Salary, SC - Step Cost}
 \label{table:configure_segregation_system}
 \end{table}
+
 \subsection{Development system}
 
 \subsubsection{Set iteration number}
@@ -226,15 +223,17 @@ The task is performed by a ML engineer.
 \hline
 \textbf{2} \textbf{SYSTEM} shows the training loss curve. & & & & \\
 \hline
-\textbf{3.1} \textbf{IF} the loss is flat for at least half of the iterations: & 0.4 & 3 & 2.50 & 3.00 \\
+\textbf{3} \textbf{ACTOR} checks the learning curve. & 1 & 3 & 2.50 & 7.50 \\
+\hline
+\textbf{3.1} \textbf{IF} the loss is flat for at least half of the iterations: & 0.4 & & & \\
 \hline
 \textbf{3.1.1} \textbf{THEN} \textbf{ACTOR} clicks "Overfit" button. & 0.4 & 1 & 2.50 & 1.00 \\
 \hline
-\textbf{3.2} \textbf{IF} the loss is not flat at the end of the iterations: & 0.4 & 3 & 2.50 & 3.00 \\
+\textbf{3.2} \textbf{IF} the loss is not flat at the end of the iterations: & 0.4 & & & \\
 \hline
 \textbf{3.2.1} \textbf{THEN} \textbf{ACTOR} clicks "Underfit" button. & 0.4 & 1 & 2.50 & 1.00 \\
 \hline
-\textbf{3.3} \textbf{ELSE} & 0.2 & 3 & 2.50 & 1.50 \\
+\textbf{3.3} \textbf{ELSE} & 0.2 & & & \\
 \hline
 \textbf{3.3.1} \textbf{ACTOR} clicks "Approved" button. & 0.2 & 1 & 2.50 & 0.50 \\
 \hline
@@ -242,7 +241,7 @@ The task is performed by a ML engineer.
 \hline
 \textbf{5} \textbf{ACTOR} closes the form. & 1 & 1 & 2.50 & 2.50 \\
 \hline
-\multicolumn{4}{|r|}{Human task cost} & 15.00 \\
+\multicolumn{4}{|r|}{Human task cost} & 15 \\
 \hline
 \end{tabularx}
 \caption{Detailed use case for "Check training report" task\\ 
