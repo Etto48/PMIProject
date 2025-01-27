@@ -12,5 +12,5 @@ MAIN_PATH=main.tex
 DOCX_PATH=main.docx
 TEMPLATE_PATH=template.docx
 
-pandoc "$MAIN_PATH" -o "$DOCX_PATH" --reference-doc="$TEMPLATE_PATH"
+pandoc "$MAIN_PATH" -o "$DOCX_PATH" --reference-doc="$TEMPLATE_PATH" --dpi=1000
 python3 fix_docx.py

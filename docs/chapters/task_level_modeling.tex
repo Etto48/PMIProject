@@ -1,5 +1,8 @@
 \section{Task level modeling}
 
+\subsection{Roles and salaries}
+\ididthis{Ettore Ricci, Paolo Palumbo}
+
 \begin{table}[H]
 \centering
 \begin{tabularx}{\textwidth}{|p{2.3cm}|X|l|m{2.2cm}|}
@@ -31,6 +34,7 @@ Ensures solutions align with clinical standards and address neurological challen
 \subsection{Segregation system}
 
 \subsubsection{Check data balancing}
+\ididthis{Ettore Ricci, Paolo Palumbo}
 
 The task is performed by a Data Analyst.
 
@@ -75,6 +79,7 @@ The task is performed by a Data Analyst.
 \end{table}
 
 \subsubsection{Check input coverage}
+\ididthis{Ettore Ricci, Paolo Palumbo}
 
 The task is performed by a Data Analyst.
 
@@ -122,7 +127,9 @@ O - Occurrence, CL - Cognitive Level, S - Normalized Salary, SC - Step Cost}
 \label{table:check_input_coverage}
 \end{table}
 
-\subsubsection{TASK Configure Segregation System \{Zahra Omrani, Francesco Boldrini\}}
+\subsubsection{Configure Segregation System}
+\ididthis{Francesco Boldrini, Zahra Omrani}
+
 This task is performed by a ML Engineer.
 
 \begin{figure}[H]
@@ -167,7 +174,8 @@ O - Occurrence, CL - Cognitive Level, S - Normalized Salary, SC - Step Cost}
 
 \subsection{Development system}
 
-\subsubsection{TASK Set \# Iteration \{Zahra Omrani\}}
+\subsubsection{Set iteration number}
+\ididthis{Zahra Omrani}
 
 The task is performed by a ML engineer.
 
@@ -210,6 +218,7 @@ O - Occurrence, CL - Cognitive Level, S - Normalized Salary, SC - Step Cost}
 \end{table}
 
 \subsubsection{Check learning report}
+\ididthis{Paolo Palumbo}
 
 The task is performed by a ML engineer.
 
@@ -256,6 +265,7 @@ O - Occurrence, CL - Cognitive Level, S - Normalized Salary, SC - Step Cost}
 \end{table}
 
 \subsubsection{Check validation report}
+\ididthis{Ettore Ricci}
 
 This task is performed by a ML engineer.
 
@@ -312,6 +322,7 @@ O - Occurrence, CL - Cognitive Level, S - Normalized Salary, SC - Step Cost}
 \end{table}
 
 \subsubsection{Check test results}
+\ididthis{Ettore Ricci}
 
 This task is performed by a ML engineer.
 
@@ -354,7 +365,9 @@ O - Occurrence, CL - Cognitive Level, S - Normalized Salary, SC - Step Cost}
 \end{table}
 
 
-\subsubsection{TASK Configure Development System\{Zahra Omrani, Francesco Boldrini\}}
+\subsubsection{Configure Development System}
+\ididthis{Francesco Boldrini, Zahra Omrani}
+
 This task is performed by a ML Engineer.
 
 \begin{figure}[H]
@@ -398,7 +411,9 @@ O - Occurrence, CL - Cognitive Level, S - Normalized Salary, SC - Step Cost}
 \end{table}
 \subsection{Evaluation system}
 
-\subsubsection{TASK Evaluate classifier performance\{Zahra Omrani\}}
+\subsubsection{Evaluate classifier performance}
+\ididthis{Zahra Omrani}
+
 This task is performed by a Data Analyst.
 
 \begin{figure}[H]
@@ -408,41 +423,43 @@ This task is performed by a Data Analyst.
 \end{figure}
 
 \begin{table}[H]
-    \centering
-    \begin{tabularx}{\textwidth}{|X|c|c|c|c|}
-    \hline
-    \textbf{Step} & \textbf{O} & \textbf{CL} & \textbf{S} & \textbf{SC} \\
-    \hline
-    \textbf{1} \textbf{ACTOR} opens the "Evaluate Classifier Performance" form. & 1 & 1 & 1.15 & 1.15 \\
-    \hline
-    \textbf{2} \textbf{SYSTEM} displays a table of sessions with Expert Label (ground truth) and Classifier Label (predicted label). 
-    The difference between the labels (if any) represents an error. & & & & \\
-    \hline
-    \textbf{3.1} \textbf{ACTOR} checks the total errors threshold color. &1 & 2& 1.15&2.30 \\
-    \hline
-    \textbf{3.2} \textbf{ACTOR} checks the consecutive errors threshold color &1 & 2& 1.15&2.30 \\
-    \hline
-    \textbf{3.3} \textbf{IF} at least one threshold is red &  &  & & \\
-    \hline
-    \textbf{3.3.1} \textbf{ACTOR} clicks the "Fail" button. &0.4 &1 & 1.15&0.46 \\
-    \hline
-    \textbf{3.4} \textbf{ELSE} & & & & \\
-    \hline
-    \textbf{3.4.1} \textbf{ACTOR} clicks the "Pass" button. &0.6 &1 & 1.15&0.65\\
-    \hline
-    \textbf{4} \textbf{SYSTEM} shows a confirmation dialog. & & & &\\
-    \hline
-    \textbf{5} \textbf{ACTOR} closes the form. &1 &1 & 1.15&1.15\\
-    \hline
-    \multicolumn{4}{|r|}{Human task cost} &8.05 \\
-    \hline
-    \end{tabularx}
-    \caption{Detailed use case for "Evaluate Classifier Performance" task\\ 
-    O - Occurrence, CL - Cognitive Level, S - Normalized Salary, SC - Step Cost}
-    \label{table:evaluate_classifier_performance}
-    \end{table}
+\centering
+\begin{tabularx}{\textwidth}{|X|c|c|c|c|}
+\hline
+\textbf{Step} & \textbf{O} & \textbf{CL} & \textbf{S} & \textbf{SC} \\
+\hline
+\textbf{1} \textbf{ACTOR} opens the "Evaluate Classifier Performance" form. & 1 & 1 & 1.15 & 1.15 \\
+\hline
+\textbf{2} \textbf{SYSTEM} displays a table of sessions with Expert Label (ground truth) and Classifier Label (predicted label). 
+The difference between the labels (if any) represents an error. & & & & \\
+\hline
+\textbf{3.1} \textbf{ACTOR} checks the total errors threshold color. &1 & 2& 1.15&2.30 \\
+\hline
+\textbf{3.2} \textbf{ACTOR} checks the consecutive errors threshold color &1 & 2& 1.15&2.30 \\
+\hline
+\textbf{3.3} \textbf{IF} at least one threshold is red &  &  & & \\
+\hline
+\textbf{3.3.1} \textbf{ACTOR} clicks the "Fail" button. &0.4 &1 & 1.15&0.46 \\
+\hline
+\textbf{3.4} \textbf{ELSE} & & & & \\
+\hline
+\textbf{3.4.1} \textbf{ACTOR} clicks the "Pass" button. &0.6 &1 & 1.15&0.65\\
+\hline
+\textbf{4} \textbf{SYSTEM} shows a confirmation dialog. & & & &\\
+\hline
+\textbf{5} \textbf{ACTOR} closes the form. &1 &1 & 1.15&1.15\\
+\hline
+\multicolumn{4}{|r|}{Human task cost} &8.05 \\
+\hline
+\end{tabularx}
+\caption{Detailed use case for "Evaluate Classifier Performance" task\\ 
+O - Occurrence, CL - Cognitive Level, S - Normalized Salary, SC - Step Cost}
+\label{table:evaluate_classifier_performance}
+\end{table}
 
-\subsubsection{TASK Configure Evaluation System \{Zahra Omrani, Francesco Boldrini\}}
+\subsubsection{Configure Evaluation System}
+\ididthis{Francesco Boldrini, Zahra Omrani}
+
 This task is performed by a ML Engineer.
 
 \begin{figure}[H]
@@ -487,7 +504,9 @@ O - Occurrence, CL - Cognitive Level, S - Normalized Salary, SC - Step Cost}
 
 \subsection{ Client-Side Systems}
 
-\subsubsection{TASK Configure Client-Side Systems\{Zahra Omrani, Francesco Boldrini\}}
+\subsubsection{Configure Client-Side Systems}
+\ididthis{Francesco Boldrini, Zahra Omrani}
+
 This task is performed by a ML Engineer.
 
 \begin{figure}[H]
@@ -523,7 +542,9 @@ O - Occurrence, CL - Cognitive Level, S - Normalized Salary, SC - Step Cost}
 
 \subsection{Production System}
 
-\subsubsection{TASK Configure Production Systems\{Zahra Omrani, Francesco Boldrini\}}
+\subsubsection{Configure Production Systems}
+\ididthis{Francesco Boldrini, Zahra Omrani}
+
 This task is performed by a ML Engineer.
 
 \begin{figure}[H]
@@ -560,7 +581,9 @@ O - Occurrence, CL - Cognitive Level, S - Normalized Salary, SC - Step Cost}
 
 \subsection{Ingestion System}
 
-\subsubsection{TASK Configure Ingestion System\{Zahra Omrani, Francesco Boldrini\}}
+\subsubsection{Configure Ingestion System}
+\ididthis{Francesco Boldrini, Zahra Omrani}
+
 This task is performed by a ML Engineer.
 
 \begin{figure}[H]
@@ -605,7 +628,9 @@ O - Occurrence, CL - Cognitive Level, S - Normalized Salary, SC - Step Cost}
 
 \subsection{Preparation System}
 
-\subsubsection{TASK Configure Preparation System\{Zahra Omrani, Francesco Boldrini\}}
+\subsubsection{Configure Preparation System}
+\ididthis{Francesco Boldrini, Zahra Omrani}
+
 This task is performed by a ML Engineer.
 
 \begin{figure}[H]
