@@ -7,14 +7,14 @@ We modified the simulation configuration
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.8\textwidth]{figures/disco_map.png}
+\includegraphics[width=0.8\textwidth]{figures/disco_map.pdf}
 \caption{Disco analysis}
 \label{fig:disco_analysis}
 \end{figure}
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=\textwidth]{figures/apromore_map.png}
+\includegraphics[width=\textwidth]{figures/apromore_map.pdf}
 \caption{Apromore analysis}
 \label{fig:apromore_analysis}
 \end{figure}
@@ -24,24 +24,24 @@ Apromore are identical.
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=\textwidth]{figures/prom_mined.png}
+\includegraphics[width=\textwidth]{figures/prom_mined.pdf}
 \caption{ProM mined BPMN model}
 \label{fig:prom_mined}
 \end{figure}
 
-The BPMN model mined from ProM is not compliant with the BPMN 2.0 specification
-(section 10.5). Furthermore, the model contains parallel gateways that are never present
-in the collapsed model.
+We mined the logs using the "Heuristics Miner ProM6" mining algorithm.
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=\textwidth]{figures/apromore_mined.png}
+\includegraphics[width=\textwidth]{figures/apromore_mined.pdf}
 \caption{Apromore mined BPMN model}
 \label{fig:apromore_mined}
 \end{figure}
 
-The BPMN model mined from Apromore is much more sensible compared to the one from ProM, also
-it is compliant with the BPMN 2.0 specification.
+The BPMN model mined from Apromore is more detailed and
+covers more cases than the one mined from ProM.
+Confronting the two models with the original BPMN, we can see that neither
+of the two tools was able to recreate the training cycle accurately.
 
 \begin{table}[H]
 \centering
@@ -51,7 +51,7 @@ it is compliant with the BPMN 2.0 specification.
 \hline
 Apromore & 0.4203 & 0.9872 & 0.7566 & \\
 \hline
-ProM & 0.6666 & 0 & 0 & \\
+ProM & 0.2917 & 0.9871 & 0.9871 & \\
 \hline
 \end{tabular}
 \caption{Comparison of the process mining tools}
