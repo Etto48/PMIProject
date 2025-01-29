@@ -146,38 +146,48 @@ This task is performed by a ML Engineer.
 \end{figure}
 
 \begin{table}[H]
-\centering
-\begin{tabularx}{\textwidth}{|X|c|c|c|c|}
-\hline
-\textbf{Step} & \textbf{O} & \textbf{CL} & \textbf{S} & \textbf{SC} \\
-\hline
-\textbf{1} \textbf{ACTOR} opens the "Configure Segregation System" form. &  1 & 1 & 2.50 & 2.50 \\
-\hline
-\textbf{2} \textbf{SYSTEM} displays current configuration and "Upload" button. & & & & \\
-\hline
-\textbf{3} \textbf{ACTOR} checks parameters against previous iterations on file & 1 & 3 & 2.50 & 7.50 \\
-\hline
-\textbf{4} \textbf{ACTOR} adjusts file based on current parameters & 1 & 3 & 2.50 & 7.50 \\
-\hline
-\textbf{5} \textbf{ACTOR} pushes "Upload" button and uploads configuration file & 1 & 1 & 2.50 & 2.50 \\
-\hline
-\textbf{6.1} \textbf{SYSTEM} IF config is correct and correctly formatted & & & & \\
-\hline
-\textbf{6.1.1} \textbf{SYSTEM} shows a confirmation message. & & & & \\
-\hline
-\textbf{6.2} \textbf{ELSE} & & & & \\
-\hline
-\textbf{6.2.1} \textbf{SYSTEM} shows error message and aborts & & & & \\
-\hline
-\textbf{7} \textbf{ACTOR} closes the form. & 1 & 1 & 2.50 & 2.50 \\
-\hline
-\multicolumn{4}{|r|}{Human task cost} & 22.50 \\
-\hline
-\end{tabularx}
-\caption{Detailed use case for "Configure Segregation" task\\ 
-O - Occurrence, CL - Cognitive Level, S - Normalized Salary, SC - Step Cost}
-\label{table:configure_segregation_system}
-\end{table}
+    \centering
+    \begin{tabularx}{\textwidth}{|X|c|c|c|c|}
+    
+    \hline
+    \textbf{Step} & \textbf{O} & \textbf{CL} & \textbf{S} & \textbf{SC} \\
+    \hline
+    \textbf{1} \textbf{ACTOR} opens the "Configure Segregation System" form. & & & & \\
+    \hline
+    \textbf{2} \textbf{SYSTEM} displays the current configuration.& & & & \\ 
+    \hline
+    \textbf{3} \textbf{ACTOR} sets the \texttt{balancing\_tolerance}.& & & & \\
+    \hline
+    \textbf{4} \textbf{ACTOR} sets the \texttt{required\_sessions}. & & & & \\
+    \hline
+    \textbf{5} \textbf{ACTOR} sets the \texttt{messaging\_sys\_addr}.& & & & \\ 
+    \hline
+    \textbf{6} \textbf{ACTOR} sets the \texttt{development\_sys\_addr}.& & & & \\ 
+    \hline
+    \textbf{7} \textbf{ACTOR} sets the \texttt{test\_set\_size}.& & & & \\ 
+    \hline
+    \textbf{8} \textbf{ACTOR} sets the \texttt{valid\_set\_size}.& & & & \\ 
+    \hline
+    \textbf{9} \textbf{ACTOR} sets the \texttt{required\_sessions\_for\_train}.& & & & \\ 
+    \hline
+    \textbf{10} \textbf{SYSTEM} validates the configuration.& & & & \\
+    \hline
+    \textbf{10.1} \textbf{IF} the configuration is correct and properly formatted:& & & & \\ 
+    \hline
+    \textbf{10.1.1} \textbf{SYSTEM} displays a confirmation message.& & & & \\ 
+    \hline
+    \textbf{10.2} \textbf{ELSE} (if the configuration is incorrect):& & & & \\
+    \hline
+    \textbf{10.2.1} \textbf{SYSTEM} displays an error message and aborts the process.& & & & \\
+    \hline
+    \textbf{11} \textbf{ACTOR} closes the form.& & & & \\
+    \hline
+    \multicolumn{4}{|r|}{Human task cost} & \\
+    \hline
+    \end{tabularx}
+    \caption{Detailed use case for "Configure Segregation System" task}
+    \label{table:configure_segregation_system}
+    \end{table}
 
 \subsection{Development system}
 
@@ -384,38 +394,48 @@ This task is performed by a ML Engineer.
 \end{figure}
 
 \begin{table}[H]
-\centering
-\begin{tabularx}{\textwidth}{|X|c|c|c|c|}
-\hline
-\textbf{Step} & \textbf{O} & \textbf{CL} & \textbf{S} & \textbf{SC} \\
-\hline
-\textbf{1} \textbf{ACTOR} opens the "Configure Development System" form. & 1 & 1 & 2.50 & 2.50 \\
-\hline
-\textbf{2} \textbf{SYSTEM} displays current configuration and "Upload" button. & & & & \\
-\hline
-\textbf{3} \textbf{ACTOR} checks parameters against previous iterations on file & 1 & 3 & 2.50 & 7.50 \\
-\hline
-\textbf{4} \textbf{ACTOR} adjusts file based on current parameters & 1 & 3 & 2.50 & 7.50 \\
-\hline
-\textbf{5} \textbf{ACTOR} pushes "Upload" button and uploads configuration file & 1 & 1 & 2.50 & 2.50 \\
-\hline
-\textbf{6.1} \textbf{SYSTEM} IF config is correct and correctly formatted & & & & \\
-\hline
-\textbf{6.1.1} \textbf{SYSTEM} shows a confirmation message. & & & & \\
-\hline
-\textbf{6.2} \textbf{ELSE} & & & & \\
-\hline
-\textbf{6.2.1} \textbf{SYSTEM} shows error message and aborts & & & & \\
-\hline
-\textbf{7} \textbf{ACTOR} closes the form. & 1 & 1 & 2.50 & 2.50 \\
-\hline
-\multicolumn{4}{|r|}{Human task cost} & 22.50 \\
-\hline
-\end{tabularx}
-\caption{Detailed use case for "Configure Development" task\\ 
-O - Occurrence, CL - Cognitive Level, S - Normalized Salary, SC - Step Cost}
-\label{table:configure_development_system}
-\end{table}
+    \centering
+    \begin{tabularx}{\textwidth}{|X|c|c|c|c|}
+    \hline
+    \textbf{Step} & \textbf{O} & \textbf{CL} & \textbf{S} & \textbf{SC} \\
+    \hline
+    \textbf{1} \textbf{ACTOR} opens the "Configure Development System" form. & & & & \\
+    \hline
+    \textbf{2} \textbf{SYSTEM} displays current configuration. & & & & \\
+    \hline
+    \textbf{3} \textbf{ACTOR} sets the \texttt{hyperparameters} parameter. & & & & \\
+    \hline
+    \textbf{4} \textbf{ACTOR} sets the \texttt{overfitting\_tolerance} parameter. & & & & \\
+    \hline
+    \textbf{5} \textbf{ACTOR} sets the \texttt{generalization\_tolerance} parameter. & & & & \\
+    \hline
+    \textbf{6} \textbf{ACTOR} sets the \texttt{iterations} parameter. & & & & \\
+    \hline
+    \textbf{7} \textbf{ACTOR} choose the \texttt{training\_phase} parameter from the drop down (\texttt{validation, test}). & & & & \\
+    \hline
+    \textbf{8} \textbf{ACTOR} sets the \texttt{production\_sys\_addr} parameter. & & & & \\
+    \hline
+    \textbf{9} \textbf{ACTOR} sets the \texttt{messaging\_sys\_addr} parameter. & & & & \\
+    \hline
+    \textbf{10} \textbf{ACTOR} choose the \texttt{phase} parameter from the drop down (\texttt{inference, develop, evaluation}) . & & & & \\
+    \hline
+    \textbf{11.1} \textbf{SYSTEM} IF config is correct and correctly formatted. & & & & \\
+    \hline
+    \textbf{11.1.1} \textbf{SYSTEM} shows a confirmation message. & & & & \\
+    \hline
+    \textbf{11.2} \textbf{ELSE} & & & & \\
+    \hline
+    \textbf{11.2.1} \textbf{SYSTEM} shows error message and aborts. & & & & \\
+    \hline
+    \textbf{12} \textbf{ACTOR} closes the form. & & & & \\
+    \hline
+    \multicolumn{4}{|r|}{Human task cost} & \\
+    \hline
+    \end{tabularx}
+    \caption{Detailed use case for "Configure Development" task\\ 
+    O - Occurrence, CL - Cognitive Level, S - Normalized Salary, SC - Step Cost}
+    \label{table:configure_development_system}
+    \end{table}
 \subsection{Evaluation system}
 
 \subsubsection{Evaluate classifier performance}
@@ -476,38 +496,40 @@ This task is performed by a ML Engineer.
 \end{figure}
 
 \begin{table}[H]
-\centering
-\begin{tabularx}{\textwidth}{|X|c|c|c|c|}
-\hline
-\textbf{Step} & \textbf{O} & \textbf{CL} & \textbf{S} & \textbf{SC} \\
-\hline
-\textbf{1} \textbf{ACTOR} opens the "Configure Evaluation System" form. & 1 & 1 & 2.50 & 2.50 \\
-\hline
-\textbf{2} \textbf{SYSTEM} displays current configuration and "Upload" button. & & & & \\
-\hline
-\textbf{3} \textbf{ACTOR} checks parameters against previous iterations on file & 1 & 3 & 2.50 & 7.50 \\
-\hline
-\textbf{4} \textbf{ACTOR} adjusts file based on current parameters & 1 & 3 & 2.50 & 7.50 \\
-\hline
-\textbf{5} \textbf{ACTOR} pushes "Upload" button and uploads configuration file & 1 & 1 & 2.50 & 2.50 \\
-\hline
-\textbf{6.1} \textbf{SYSTEM} IF config is correct and correctly formatted & & & & \\
-\hline
-\textbf{6.1.1} \textbf{SYSTEM} shows a confirmation message. & & & & \\
-\hline
-\textbf{6.2} \textbf{ELSE} & & & & \\
-\hline
-\textbf{6.2.1} \textbf{SYSTEM} shows error message and aborts & & & & \\
-\hline
-\textbf{7} \textbf{ACTOR} closes the form. & 1 & 1 & 2.50 & 2.50 \\
-\hline
-\multicolumn{4}{|r|}{Human task cost} & 22.50 \\
-\hline
-\end{tabularx}
-\caption{Detailed use case for "Configure Evaluation" task\\ 
-O - Occurrence, CL - Cognitive Level, S - Normalized Salary, SC - Step Cost}
-\label{table:configure_evaluation_system}
-\end{table}
+    \centering
+    \begin{tabularx}{\textwidth}{|X|c|c|c|c|}
+    \hline
+    \textbf{Step} & \textbf{O} & \textbf{CL} & \textbf{S} & \textbf{SC} \\
+    \hline
+    \textbf{1} \textbf{ACTOR} opens the "Configure Evaluation System" form. &  &  &  &  \\
+    \hline
+    \textbf{2} \textbf{SYSTEM} displays current configuration. & & & & \\
+    \hline
+    \textbf{3} \textbf{ACTOR} sets the \texttt{max\_errors} parameter. & & & & \\
+    \hline
+    \textbf{4} \textbf{ACTOR} sets the \texttt{max\_consecutive\_errors} parameter. & & & & \\
+    \hline
+    \textbf{5} \textbf{ACTOR} sets the \texttt{required\_labels} parameter. & & & & \\
+    \hline
+    \textbf{6} \textbf{ACTOR} sets the \texttt{messaging\_sys\_addr} parameter. & & & & \\
+    \hline
+    \textbf{7.1} \textbf{SYSTEM} IF config is correct and correctly formatted. & & & & \\
+    \hline
+    \textbf{7.1.1} \textbf{SYSTEM} shows a confirmation message. & & & & \\
+    \hline
+    \textbf{7.2} \textbf{ELSE} & & & & \\
+    \hline
+    \textbf{7.2.1} \textbf{SYSTEM} shows error message and aborts. & & & & \\
+    \hline
+    \textbf{9} \textbf{ACTOR} closes the form. &  &&  &  \\
+    \hline
+    \multicolumn{4}{|r|}{Human task cost} & \\
+    \hline
+    \end{tabularx}
+    \caption{Detailed use case for "Configure Evaluation" task\\ 
+    O - Occurrence, CL - Cognitive Level, S - Normalized Salary, SC - Step Cost}
+    \label{table:configure_evaluation_system}
+    \end{table}
 
 \subsection{ Client-Side Systems}
 
@@ -561,28 +583,39 @@ This task is performed by a ML Engineer.
 \end{figure}
 
 \begin{table}[H]
-\centering
-\begin{tabularx}{\textwidth}{|X|c|c|c|c|}
-\hline
-\textbf{Step} & \textbf{O} & \textbf{CL} & \textbf{S} & \textbf{SC} \\
-\hline
-\textbf{1} \textbf{ACTOR} opens the "Configure Production System" form. & 1 & 1 & 2.50 & 2.50 \\
-\hline
-\textbf{2} \textbf{SYSTEM} displays the "Upload" button.& & & & \\
-\hline
-\textbf{3} \textbf{ACTOR} push the "Upload" button and upload the configuration file. & 1 & 1 & 2.50 & 2.50 \\
-\hline
-\textbf{4} \textbf{SYSTEM} shows a confirmation message. & & & & \\
-\hline
-\textbf{5} \textbf{ACTOR} closes the form. & 1 & 1 & 2.50 & 2.50 \\
-\hline
-\multicolumn{4}{|r|}{Human task cost} & 7.50 \\
-\hline
-\end{tabularx}
-\caption{Detailed use case for "Configure Production" task\\ 
-O - Occurrence, CL - Cognitive Level, S - Normalized Salary, SC - Step Cost}
-\label{table:configure_production_system}
-\end{table}
+    \centering
+    \begin{tabularx}{\textwidth}{|X|c|c|c|c|}
+    \hline
+    \textbf{Step} & \textbf{O} & \textbf{CL} & \textbf{S} & \textbf{SC} \\
+    \hline
+    \textbf{1} \textbf{ACTOR} opens the "Configure Production System" form. & & & & \\
+    \hline
+    \textbf{2} \textbf{SYSTEM} displays current configuration. & & & & \\
+    \hline
+    \textbf{3} \textbf{ACTOR} sets the \texttt{production\_sys\_addr} parameter. & & & & \\
+    \hline
+    \textbf{4} \textbf{ACTOR} sets the \texttt{messaging\_sys\_addr} parameter. & & & & \\
+    \hline
+    \textbf{5} \textbf{ACTOR} choose the \texttt{phase} parameter from the drop down (\texttt{inference, develop, evaluation}). & & & & \\
+    \hline
+    \textbf{6.1} \textbf{SYSTEM} IF config is correct and correctly formatted. & & & & \\
+    \hline
+    \textbf{6.1.1} \textbf{SYSTEM} shows a confirmation message. & & & & \\
+    \hline
+    \textbf{6.2} \textbf{ELSE} & & & & \\
+    \hline
+    \textbf{6.2.1} \textbf{SYSTEM} shows error message and aborts. & & & & \\
+    \hline
+    \textbf{7} \textbf{ACTOR} closes the form. & & & & \\
+    \hline
+    \multicolumn{4}{|r|}{Human task cost} & \\
+    \hline
+    \end{tabularx}
+    
+    \caption{Detailed use case for "Configure Production" task\\ 
+    O - Occurrence, CL - Cognitive Level, S - Normalized Salary, SC - Step Cost}
+    \label{table:configure_production_system}
+    \end{table}
 
 
 
@@ -600,38 +633,41 @@ This task is performed by a ML Engineer.
 \end{figure}
 
 \begin{table}[H]
-\centering
-\begin{tabularx}{\textwidth}{|X|c|c|c|c|}
-\hline
-\textbf{Step} & \textbf{O} & \textbf{CL} & \textbf{S} & \textbf{SC} \\
-\hline
-\textbf{1} \textbf{ACTOR} opens the "Configure Ingestion System" form. &  & & 2.50 & \\
-\hline
-\textbf{2} \textbf{SYSTEM} displays current configuration and "Upload" button. & & & & \\
-\hline
-\textbf{3} \textbf{ACTOR} checks parameters against previous iterations on file & 1 & 3 & 2.50 & 7.50 \\
-\hline
-\textbf{4} \textbf{ACTOR} adjusts file based on current parameters & 1 & 3 & 2.50 & 7.50 \\
-\hline
-\textbf{5} \textbf{ACTOR} pushes "Upload" button and uploads configuration file & 1 & 1 & 2.50 & 2.50 \\
-\hline
-\textbf{6.1} \textbf{SYSTEM} IF config is correct and correctly formatted & & & & \\
-\hline
-\textbf{6.1.1} \textbf{SYSTEM} shows a confirmation message. & & & & \\
-\hline
-\textbf{6.2} \textbf{ELSE} & & & & \\
-\hline
-\textbf{6.2.1} \textbf{SYSTEM} shows error message and aborts & & & & \\
-\hline
-\textbf{7} \textbf{ACTOR} closes the form. & 1 & 1 & 2.50 & 2.50 \\
-\hline
-\multicolumn{4}{|r|}{Human task cost} & 22.50 \\
-\hline
-\end{tabularx}
-\caption{Detailed use case for "Configure Ingestion" task\\ 
-O - Occurrence, CL - Cognitive Level, S - Normalized Salary, SC - Step Cost}
-\label{table:configure_ingestion_system}
-\end{table}
+    \centering
+    \begin{tabularx}{\textwidth}{|X|c|c|c|c|}
+    \hline
+    \textbf{Step} & \textbf{O} & \textbf{CL} & \textbf{S} & \textbf{SC} \\
+    \hline
+    \textbf{1} \textbf{ACTOR} opens the "Configure Ingestion System" form. & 1 & 1  & 2.5 & 2.5 \\
+    \hline
+    \textbf{2} \textbf{SYSTEM} displays the current configuration. &  & &&  \\
+    \hline
+    \textbf{3} \textbf{ACTOR} sets the \texttt{max\_missing\_samples}. & 1 & 2  & 2.5 & 5.0 \\
+    \hline
+    \textbf{4} \textbf{ACTOR} sets the \texttt{required\_records}. & 1 & 2  & 2.5 & 5.0 \\
+    \hline
+    \textbf{5} \textbf{ACTOR} sets the \texttt{evaluation\_sys\_addr}. & 1 & 1  & 2.5 & 2.5 \\
+    \hline
+    \textbf{6} \textbf{ACTOR} sets the \texttt{preparation\_sys\_addr}. & 1 & 1  & 2.5 & 2.5 \\
+    \hline
+    \textbf{7} \textbf{ACTOR} selects the \texttt{phase} from the dropdown (\texttt{inference}, \texttt{development}, \texttt{evaluation}). & 1 & 2  & 2.5 & 5.0 \\
+    \hline
+    \textbf{8.1} \textbf{SYSTEM} IF the configurations are correct and properly formatted: &  &  &  &  \\
+    \hline
+    \textbf{8.1.1} \textbf{SYSTEM} displays a confirmation message. &  &  &  &  \\
+    \hline
+    \textbf{8.2} \textbf{ELSE} (if the configurations are incorrect): &  &  &  &  \\
+    \hline
+    \textbf{8.2.1} \textbf{SYSTEM} displays an error message and aborts the process. &  &  &  &  \\
+    \hline
+    \textbf{9} \textbf{ACTOR} closes the form. & 1 & 1  & 2.5 & 2.5 \\
+    \hline
+    \multicolumn{4}{|r|}{Human task cost} & 25.0 \\
+    \hline
+    \end{tabularx}
+    \caption{Detailed use case for "Configure Ingestion System" task}
+    \label{table:configure_ingestion_system}
+    \end{table} 
 
 \subsection{Preparation System}
 
@@ -647,36 +683,50 @@ This task is performed by a ML Engineer.
 \end{figure}
 
 \begin{table}[H]
-\centering
-\begin{tabularx}{\textwidth}{|X|c|c|c|c|}
-\hline
-\textbf{Step} & \textbf{O} & \textbf{CL} & \textbf{S} & \textbf{SC} \\
-\hline
-\textbf{1} \textbf{ACTOR} opens the "Configure Preparation System" form. &  & & 2.50 & \\
-\hline
-\textbf{2} \textbf{SYSTEM} displays current configuration and "Upload" button. & & & & \\
-\hline
-\textbf{3} \textbf{ACTOR} checks parameters against previous iterations on file & 1 & 3 & 2.50 & 7.50 \\
-\hline
-\textbf{4} \textbf{ACTOR} adjusts file based on current parameters & 1 & 3 & 2.50 & 7.50 \\
-\hline
-\textbf{5} \textbf{ACTOR} pushes "Upload" button and uploads configuration file & 1 & 1 & 2.50 & 2.50 \\
-\hline
-\textbf{6.1} \textbf{SYSTEM} IF config is correct and correctly formatted & & & & \\
-\hline
-\textbf{6.1.1} \textbf{SYSTEM} shows a confirmation message. & & & & \\
-\hline
-\textbf{6.2} \textbf{ELSE} & & & & \\
-\hline
-\textbf{6.2.1} \textbf{SYSTEM} shows error message and aborts & & & & \\
-\hline
-\textbf{7} \textbf{ACTOR} closes the form. & 1 & 1 & 2.50 & 2.50 \\
-\hline
-\multicolumn{4}{|r|}{Human task cost} & 22.50 \\
-\hline
-\end{tabularx}
-
-\caption{Detailed use case for "Configure Preparation" task\\ 
-O - Occurrence, CL - Cognitive Level, S - Normalized Salary, SC - Step Cost}
-\label{table:configure_preparation_system}
-\end{table}
+    \centering
+    \begin{tabularx}{\textwidth}{|X|c|c|c|c|}
+    \hline
+    \textbf{Step} & \textbf{O} & \textbf{CL} & \textbf{S} & \textbf{SC} \\
+    \hline
+    \textbf{1} \textbf{ACTOR} opens the "Configure Preparation System" form. & 1 & 1 & 2.5 & 2.5 \\
+    \hline
+    \textbf{2} \textbf{SYSTEM} displays the current configuration. &  &  &  &  \\
+    \hline
+    \textbf{3} \textbf{ACTOR} sets the \texttt{alpha\_max}. & 1 & 2 & 2.5 & 5.0 \\
+    \hline
+    \textbf{4} \textbf{ACTOR} sets the \texttt{alpha\_min}. & 1 & 2 & 2.5 & 5.0 \\
+    \hline
+    \textbf{5} \textbf{ACTOR} sets the \texttt{beta\_max}. & 1 & 2 & 2.5 & 5.0 \\
+    \hline
+    \textbf{6} \textbf{ACTOR} sets the \texttt{beta\_min}. & 1 & 2 & 2.5 & 5.0 \\
+    \hline
+    \textbf{7} \textbf{ACTOR} sets the \texttt{theta\_max}. & 1 & 2 & 2.5 & 5.0 \\
+    \hline
+    \textbf{8} \textbf{ACTOR} sets the \texttt{theta\_min}. & 1 & 2 & 2.5 & 5.0 \\
+    \hline
+    \textbf{9} \textbf{ACTOR} sets the \texttt{delta\_max}. & 1 & 2 & 2.5 & 5.0 \\
+    \hline
+    \textbf{10} \textbf{ACTOR} sets the \texttt{delta\_min}. & 1 & 2 & 2.5 & 5.0 \\
+    \hline
+    \textbf{11} \textbf{ACTOR} sets the \texttt{production\_sys\_addr}. & 1 & 1 & 2.5 & 2.5 \\
+    \hline
+    \textbf{12} \textbf{ACTOR} sets the \texttt{segregation\_sys\_addr}. & 1 & 1 & 2.5 & 2.5 \\
+    \hline
+    \textbf{13} \textbf{ACTOR} selects the \texttt{phase} from the dropdown (\texttt{inference}, \texttt{develop}, \texttt{evaluation}). & 1 & 2 & 2.5 & 5.0 \\
+    \hline
+    \textbf{14} \textbf{SYSTEM} {IF} the configuration is correct and properly formatted: &  &  &  &  \\
+    \hline
+    \textbf{14.1} \textbf{SYSTEM} displays a confirmation message. & & & &  \\
+    \hline
+    \textbf{14.2} \textbf{ELSE} (if the configuration is incorrect): & & &  &  \\
+    \hline
+    \textbf{14.2.1} \textbf{SYSTEM} displays an error message and aborts the process. &  &  &  &  \\
+    \hline
+    \textbf{15} \textbf{ACTOR} closes the form. & 1 & 1 & 2.5 & 2.5 \\
+    \hline
+    \multicolumn{4}{|r|}{\textbf{Human task cost}} & 55 \\
+    \hline
+    \end{tabularx}
+    \caption{Detailed use case for "Configure Preparation System" task}
+    \label{table:configure_preparation_system}
+    \end{table}
