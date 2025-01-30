@@ -152,23 +152,23 @@ This task is performed by a ML Engineer.
     \hline
     \textbf{Step} & \textbf{O} & \textbf{CL} & \textbf{S} & \textbf{SC} \\
     \hline
-    \textbf{1} \textbf{ACTOR} opens the "Configure Segregation System" form. & & & & \\
+    \textbf{1} \textbf{ACTOR} opens the "Configure Segregation System" form. & 1 & 1 & 2.50 & 2.50 \\
     \hline
     \textbf{2} \textbf{SYSTEM} displays the current configuration.& & & & \\ 
     \hline
-    \textbf{3} \textbf{ACTOR} sets the \texttt{balancing\_tolerance}.& & & & \\
+    \textbf{3} \textbf{ACTOR} sets the \texttt{balancing\_tolerance}.& 1 & 4 & 2.50 & 10 \\
     \hline
-    \textbf{4} \textbf{ACTOR} sets the \texttt{required\_sessions}. & & & & \\
+    \textbf{4} \textbf{ACTOR} sets the \texttt{required\_sessions}. & 1 & 4 & 2.50 & 10 \\
     \hline
-    \textbf{5} \textbf{ACTOR} sets the \texttt{messaging\_sys\_addr}.& & & & \\ 
+    \textbf{5} \textbf{ACTOR} sets the \texttt{messaging\_sys\_addr}.& 1 & 1 & 2.50 & 2.50 \\ 
     \hline
-    \textbf{6} \textbf{ACTOR} sets the \texttt{development\_sys\_addr}.& & & & \\ 
+    \textbf{6} \textbf{ACTOR} sets the \texttt{development\_sys\_addr}.& 1 & 1 & 2.50 & 2.50 \\ 
     \hline
-    \textbf{7} \textbf{ACTOR} sets the \texttt{test\_set\_size}.& & & & \\ 
+    \textbf{7} \textbf{ACTOR} sets the \texttt{test\_set\_size}.& 1 & 4 & 2.50 & 10 \\ 
     \hline
-    \textbf{8} \textbf{ACTOR} sets the \texttt{valid\_set\_size}.& & & & \\ 
+    \textbf{8} \textbf{ACTOR} sets the \texttt{valid\_set\_size}.& 1 & 4 & 2.50 & 10 \\ 
     \hline
-    \textbf{9} \textbf{ACTOR} sets the \texttt{required\_sessions\_for\_train}.& & & & \\ 
+    \textbf{9} \textbf{ACTOR} sets the \texttt{required\_sessions\_for\_train}.& 1 & 4 & 2.50 & 10 \\ 
     \hline
     \textbf{10} \textbf{SYSTEM} validates the configuration.& & & & \\
     \hline
@@ -180,12 +180,13 @@ This task is performed by a ML Engineer.
     \hline
     \textbf{10.2.1} \textbf{SYSTEM} displays an error message and aborts the process.& & & & \\
     \hline
-    \textbf{11} \textbf{ACTOR} closes the form.& & & & \\
+    \textbf{11} \textbf{ACTOR} saves the form.& 1 & 1 & 2.50 & 2.50 \\
     \hline
-    \multicolumn{4}{|r|}{Human task cost} & \\
+    \multicolumn{4}{|r|}{Human task cost} & 60 \\
     \hline
     \end{tabularx}
-    \caption{Detailed use case for "Configure Segregation System" task}
+    \caption{Detailed use case for "Configure Segregation System" task\\ 
+    O - Occurrence, CL - Cognitive Level, S - Normalized Salary, SC - Step Cost}
     \label{table:configure_segregation_system}
     \end{table}
 
@@ -399,25 +400,25 @@ This task is performed by a ML Engineer.
     \hline
     \textbf{Step} & \textbf{O} & \textbf{CL} & \textbf{S} & \textbf{SC} \\
     \hline
-    \textbf{1} \textbf{ACTOR} opens the "Configure Development System" form. & & & & \\
+    \textbf{1} \textbf{ACTOR} opens the "Configure Development System" form. & 1 & 1 & 2.50 & 2.50\\
     \hline
     \textbf{2} \textbf{SYSTEM} displays current configuration. & & & & \\
     \hline
-    \textbf{3} \textbf{ACTOR} sets the \texttt{hyperparameters} parameter. & & & & \\
+    \textbf{3} \textbf{ACTOR} sets the \texttt{hyperparameters}. & 1 & 4 & 2.50 & 10 \\
     \hline
-    \textbf{4} \textbf{ACTOR} sets the \texttt{overfitting\_tolerance} parameter. & & & & \\
+    \textbf{4} \textbf{ACTOR} sets the \texttt{overfitting\_tolerance} parameter. & 1 & 4 & 2.50 & 10 \\
     \hline
-    \textbf{5} \textbf{ACTOR} sets the \texttt{generalization\_tolerance} parameter. & & & & \\
+    \textbf{5} \textbf{ACTOR} sets the \texttt{generalization\_tolerance} parameter. & 1 & 4 & 2.50 & 10 \\
     \hline
-    \textbf{6} \textbf{ACTOR} sets the \texttt{iterations} parameter. & & & & \\
+    \textbf{6} \textbf{ACTOR} sets the \texttt{iterations} parameter. & 1 & 4 & 2.50 & 10 \\
     \hline
-    \textbf{7} \textbf{ACTOR} choose the \texttt{training\_phase} parameter from the drop down (\texttt{validation, test}). & & & & \\
+    \textbf{7} \textbf{ACTOR} choose the \texttt{training\_phase} parameter from the drop down (\texttt{validation, test}). & 1 & 1 & 2.50 & 2.50\\
     \hline
-    \textbf{8} \textbf{ACTOR} sets the \texttt{production\_sys\_addr} parameter. & & & & \\
+    \textbf{8} \textbf{ACTOR} sets the \texttt{production\_sys\_addr} parameter. & 1 & 1 & 2.50 & 2.50 \\
     \hline
-    \textbf{9} \textbf{ACTOR} sets the \texttt{messaging\_sys\_addr} parameter. & & & & \\
+    \textbf{9} \textbf{ACTOR} sets the \texttt{messaging\_sys\_addr} parameter. & 1 & 1 & 2.50 & 2.50 \\
     \hline
-    \textbf{10} \textbf{ACTOR} choose the \texttt{phase} parameter from the drop down (\texttt{inference, develop, evaluation}) . & & & & \\
+    \textbf{10} \textbf{ACTOR} choose the \texttt{phase} parameter from the drop down (\texttt{inference, develop, evaluation}) . & 1 & 1 & 2.50 & 2.50 \\
     \hline
     \textbf{11.1} \textbf{SYSTEM} IF config is correct and correctly formatted. & & & & \\
     \hline
@@ -427,9 +428,9 @@ This task is performed by a ML Engineer.
     \hline
     \textbf{11.2.1} \textbf{SYSTEM} shows error message and aborts. & & & & \\
     \hline
-    \textbf{12} \textbf{ACTOR} closes the form. & & & & \\
+    \textbf{12} \textbf{ACTOR} saves the form. & 1 & 1 & 2.50 & 2.50 \\
     \hline
-    \multicolumn{4}{|r|}{Human task cost} & \\
+    \multicolumn{4}{|r|}{Human task cost} & 55 \\
     \hline
     \end{tabularx}
     \caption{Detailed use case for "Configure Development" task\\ 
@@ -501,17 +502,17 @@ This task is performed by a ML Engineer.
     \hline
     \textbf{Step} & \textbf{O} & \textbf{CL} & \textbf{S} & \textbf{SC} \\
     \hline
-    \textbf{1} \textbf{ACTOR} opens the "Configure Evaluation System" form. &  &  &  &  \\
+    \textbf{1} \textbf{ACTOR} opens the "Configure Evaluation System" form. & 1 & 1 & 2.50 & 2.50 \\
     \hline
     \textbf{2} \textbf{SYSTEM} displays current configuration. & & & & \\
     \hline
-    \textbf{3} \textbf{ACTOR} sets the \texttt{max\_errors} parameter. & & & & \\
+    \textbf{3} \textbf{ACTOR} sets the \texttt{max\_errors} parameter. & 1 & 4 & 2.50 & 10 \\
     \hline
-    \textbf{4} \textbf{ACTOR} sets the \texttt{max\_consecutive\_errors} parameter. & & & & \\
+    \textbf{4} \textbf{ACTOR} sets the \texttt{max\_consecutive\_errors} parameter. & 1 & 4 & 2.50 & 10 \\
     \hline
-    \textbf{5} \textbf{ACTOR} sets the \texttt{required\_labels} parameter. & & & & \\
+    \textbf{5} \textbf{ACTOR} sets the \texttt{required\_labels} parameter. & 1 & 4 & 2.50 & 10 \\
     \hline
-    \textbf{6} \textbf{ACTOR} sets the \texttt{messaging\_sys\_addr} parameter. & & & & \\
+    \textbf{6} \textbf{ACTOR} sets the \texttt{messaging\_sys\_addr} parameter. & 1 & 1 & 2.50 & 2.50 \\
     \hline
     \textbf{7.1} \textbf{SYSTEM} IF config is correct and correctly formatted. & & & & \\
     \hline
@@ -521,9 +522,9 @@ This task is performed by a ML Engineer.
     \hline
     \textbf{7.2.1} \textbf{SYSTEM} shows error message and aborts. & & & & \\
     \hline
-    \textbf{9} \textbf{ACTOR} closes the form. &  &&  &  \\
+    \textbf{9} \textbf{ACTOR} saves the form. & 1 & 1 & 2.50 & 2.50  \\
     \hline
-    \multicolumn{4}{|r|}{Human task cost} & \\
+    \multicolumn{4}{|r|}{Human task cost} & 37.50 \\
     \hline
     \end{tabularx}
     \caption{Detailed use case for "Configure Evaluation" task\\ 
@@ -550,15 +551,21 @@ This task is performed by a ML Engineer.
 \hline
 \textbf{Step} & \textbf{O} & \textbf{CL} & \textbf{S} & \textbf{SC} \\
 \hline
-\textbf{1} \textbf{ACTOR} opens the "Configure Client-Side System" form. & 1 &1 & 2.50 & \\
+\textbf{1} \textbf{ACTOR} opens the "Configure Client-Side System" form. & 1 & 1 & 2.50 & 2.50 \\
 \hline
-\textbf{2} \textbf{SYSTEM} displays the "Upload" button.& & & & \\
+\textbf{2} \textbf{SYSTEM} displays current configuration. & & & & \\
 \hline
-\textbf{3} \textbf{ACTOR} push the "Upload" button and upload the configuration file. & 1 & 1 & 2.50 & 2.50 \\
+\textbf{3} \textbf{ACTOR} sets the \texttt{ingestion\_sys\_addr} parameter. & 1 & 1 & 2.50 & 2.50 \\
 \hline
-\textbf{4} \textbf{SYSTEM} shows a confirmation message. & & & & \\
+\textbf{4.1} \textbf{SYSTEM} IF config is correct and correctly formatted. & & & & \\
 \hline
-\textbf{5} \textbf{ACTOR} closes the form. & 1 & 1 & 2.50 & 2.50 \\
+\textbf{4.1.1} \textbf{SYSTEM} shows a confirmation message. & & & & \\
+\hline
+\textbf{4.2} \textbf{ELSE} & & & & \\
+\hline
+\textbf{4.2.1} \textbf{SYSTEM} shows error message and aborts. & & & & \\
+\hline
+\textbf{5} \textbf{ACTOR} saves the form. & 1 & 1 & 2.50 & 2.50  \\
 \hline
 \multicolumn{4}{|r|}{Human task cost} & 7.50 \\
 \hline
@@ -588,15 +595,15 @@ This task is performed by a ML Engineer.
     \hline
     \textbf{Step} & \textbf{O} & \textbf{CL} & \textbf{S} & \textbf{SC} \\
     \hline
-    \textbf{1} \textbf{ACTOR} opens the "Configure Production System" form. & & & & \\
+    \textbf{1} \textbf{ACTOR} opens the "Configure Production System" form. & 1 & 1 & 2.50 & 2.50 \\
     \hline
     \textbf{2} \textbf{SYSTEM} displays current configuration. & & & & \\
     \hline
-    \textbf{3} \textbf{ACTOR} sets the \texttt{production\_sys\_addr} parameter. & & & & \\
+    \textbf{3} \textbf{ACTOR} sets the \texttt{production\_sys\_addr} parameter. & 1 & 1 & 2.50 & 2.50 \\
     \hline
-    \textbf{4} \textbf{ACTOR} sets the \texttt{messaging\_sys\_addr} parameter. & & & & \\
+    \textbf{4} \textbf{ACTOR} sets the \texttt{messaging\_sys\_addr} parameter. &  1 & 1 & 2.50 & 2.50 \\
     \hline
-    \textbf{5} \textbf{ACTOR} choose the \texttt{phase} parameter from the drop down (\texttt{inference, develop, evaluation}). & & & & \\
+    \textbf{5} \textbf{ACTOR} choose the \texttt{phase} parameter from the drop down (\texttt{inference, develop, evaluation}). & 1 & 4 & 2.50 & 10 \\
     \hline
     \textbf{6.1} \textbf{SYSTEM} IF config is correct and correctly formatted. & & & & \\
     \hline
@@ -606,9 +613,9 @@ This task is performed by a ML Engineer.
     \hline
     \textbf{6.2.1} \textbf{SYSTEM} shows error message and aborts. & & & & \\
     \hline
-    \textbf{7} \textbf{ACTOR} closes the form. & & & & \\
+    \textbf{7} \textbf{ACTOR} saves the form. & 1 & 1 & 2.50 & 2.50 \\
     \hline
-    \multicolumn{4}{|r|}{Human task cost} & \\
+    \multicolumn{4}{|r|}{Human task cost} & 20 \\
     \hline
     \end{tabularx}
     
@@ -638,19 +645,19 @@ This task is performed by a ML Engineer.
     \hline
     \textbf{Step} & \textbf{O} & \textbf{CL} & \textbf{S} & \textbf{SC} \\
     \hline
-    \textbf{1} \textbf{ACTOR} opens the "Configure Ingestion System" form. & 1 & 1  & 2.5 & 2.5 \\
+    \textbf{1} \textbf{ACTOR} opens the "Configure Ingestion System" form. & 1 & 1  & 2.50 & 2.50 \\
     \hline
     \textbf{2} \textbf{SYSTEM} displays the current configuration. &  & &&  \\
     \hline
-    \textbf{3} \textbf{ACTOR} sets the \texttt{max\_missing\_samples}. & 1 & 2  & 2.5 & 5.0 \\
+    \textbf{3} \textbf{ACTOR} sets the \texttt{max\_missing\_samples}. & 1 & 4  & 2.50 & 10 \\
     \hline
-    \textbf{4} \textbf{ACTOR} sets the \texttt{required\_records}. & 1 & 2  & 2.5 & 5.0 \\
+    \textbf{4} \textbf{ACTOR} sets the \texttt{required\_records}. & 1 & 4 & 2.50 & 10 \\
     \hline
-    \textbf{5} \textbf{ACTOR} sets the \texttt{evaluation\_sys\_addr}. & 1 & 1  & 2.5 & 2.5 \\
+    \textbf{5} \textbf{ACTOR} sets the \texttt{evaluation\_sys\_addr}. & 1 & 1  & 2.50 & 2.50 \\
     \hline
-    \textbf{6} \textbf{ACTOR} sets the \texttt{preparation\_sys\_addr}. & 1 & 1  & 2.5 & 2.5 \\
+    \textbf{6} \textbf{ACTOR} sets the \texttt{preparation\_sys\_addr}. & 1 & 1  & 2.50 & 2.50 \\
     \hline
-    \textbf{7} \textbf{ACTOR} selects the \texttt{phase} from the dropdown (\texttt{inference}, \texttt{development}, \texttt{evaluation}). & 1 & 2  & 2.5 & 5.0 \\
+    \textbf{7} \textbf{ACTOR} selects the \texttt{phase} from the dropdown (\texttt{inference}, \texttt{development}, \texttt{evaluation}). & 1 & 4  & 2.50 & 10 \\
     \hline
     \textbf{8.1} \textbf{SYSTEM} IF the configurations are correct and properly formatted: &  &  &  &  \\
     \hline
@@ -660,9 +667,9 @@ This task is performed by a ML Engineer.
     \hline
     \textbf{8.2.1} \textbf{SYSTEM} displays an error message and aborts the process. &  &  &  &  \\
     \hline
-    \textbf{9} \textbf{ACTOR} closes the form. & 1 & 1  & 2.5 & 2.5 \\
+    \textbf{9} \textbf{ACTOR} saves the form. & 1 & 1  & 2.50 & 2.50 \\
     \hline
-    \multicolumn{4}{|r|}{Human task cost} & 25.0 \\
+    \multicolumn{4}{|r|}{Human task cost} & 40 \\
     \hline
     \end{tabularx}
     \caption{Detailed use case for "Configure Ingestion System" task}
@@ -688,31 +695,31 @@ This task is performed by a ML Engineer.
     \hline
     \textbf{Step} & \textbf{O} & \textbf{CL} & \textbf{S} & \textbf{SC} \\
     \hline
-    \textbf{1} \textbf{ACTOR} opens the "Configure Preparation System" form. & 1 & 1 & 2.5 & 2.5 \\
+    \textbf{1} \textbf{ACTOR} opens the "Configure Preparation System" form. & 1 & 1 & 2.50 & 2.50 \\
     \hline
     \textbf{2} \textbf{SYSTEM} displays the current configuration. &  &  &  &  \\
     \hline
-    \textbf{3} \textbf{ACTOR} sets the \texttt{alpha\_max}. & 1 & 2 & 2.5 & 5.0 \\
+    \textbf{3} \textbf{ACTOR} sets the \texttt{alpha\_max}. & 1 & 4 & 2.50 & 10 \\
     \hline
-    \textbf{4} \textbf{ACTOR} sets the \texttt{alpha\_min}. & 1 & 2 & 2.5 & 5.0 \\
+    \textbf{4} \textbf{ACTOR} sets the \texttt{alpha\_min}. & 1 & 4 & 2.50 & 10 \\
     \hline
-    \textbf{5} \textbf{ACTOR} sets the \texttt{beta\_max}. & 1 & 2 & 2.5 & 5.0 \\
+    \textbf{5} \textbf{ACTOR} sets the \texttt{beta\_max}. & 1 & 4 & 2.50 & 10 \\
     \hline
-    \textbf{6} \textbf{ACTOR} sets the \texttt{beta\_min}. & 1 & 2 & 2.5 & 5.0 \\
+    \textbf{6} \textbf{ACTOR} sets the \texttt{beta\_min}. & 1 & 4 & 2.50 & 10 \\
     \hline
-    \textbf{7} \textbf{ACTOR} sets the \texttt{theta\_max}. & 1 & 2 & 2.5 & 5.0 \\
+    \textbf{7} \textbf{ACTOR} sets the \texttt{theta\_max}. & 1 & 4 & 2.50 & 10 \\
     \hline
-    \textbf{8} \textbf{ACTOR} sets the \texttt{theta\_min}. & 1 & 2 & 2.5 & 5.0 \\
+    \textbf{8} \textbf{ACTOR} sets the \texttt{theta\_min}. & 1 & 4 & 2.50 & 10 \\
     \hline
-    \textbf{9} \textbf{ACTOR} sets the \texttt{delta\_max}. & 1 & 2 & 2.5 & 5.0 \\
+    \textbf{9} \textbf{ACTOR} sets the \texttt{delta\_max}. & 1 & 4 & 2.50 & 10 \\
     \hline
-    \textbf{10} \textbf{ACTOR} sets the \texttt{delta\_min}. & 1 & 2 & 2.5 & 5.0 \\
+    \textbf{10} \textbf{ACTOR} sets the \texttt{delta\_min}. & 1 & 4 & 2.50 & 10 \\
     \hline
-    \textbf{11} \textbf{ACTOR} sets the \texttt{production\_sys\_addr}. & 1 & 1 & 2.5 & 2.5 \\
+    \textbf{11} \textbf{ACTOR} sets the \texttt{production\_sys\_addr}. & 1 & 1 & 2.50 & 2.50 \\
     \hline
-    \textbf{12} \textbf{ACTOR} sets the \texttt{segregation\_sys\_addr}. & 1 & 1 & 2.5 & 2.5 \\
+    \textbf{12} \textbf{ACTOR} sets the \texttt{segregation\_sys\_addr}. & 1 & 1 & 2.50 & 2.50 \\
     \hline
-    \textbf{13} \textbf{ACTOR} selects the \texttt{phase} from the dropdown (\texttt{inference}, \texttt{develop}, \texttt{evaluation}). & 1 & 2 & 2.5 & 5.0 \\
+    \textbf{13} \textbf{ACTOR} selects the \texttt{phase} from the dropdown (\texttt{inference}, \texttt{develop}, \texttt{evaluation}). & 1 & 4 & 2.50 & 10 \\
     \hline
     \textbf{14} \textbf{SYSTEM} {IF} the configuration is correct and properly formatted: &  &  &  &  \\
     \hline
@@ -722,9 +729,9 @@ This task is performed by a ML Engineer.
     \hline
     \textbf{14.2.1} \textbf{SYSTEM} displays an error message and aborts the process. &  &  &  &  \\
     \hline
-    \textbf{15} \textbf{ACTOR} closes the form. & 1 & 1 & 2.5 & 2.5 \\
+    \textbf{15} \textbf{ACTOR} saves the form. & 1 & 1 & 2.50 & 2.50 \\
     \hline
-    \multicolumn{4}{|r|}{\textbf{Human task cost}} & 55 \\
+    \multicolumn{4}{|r|}{\textbf{Human task cost}} & 100 \\
     \hline
     \end{tabularx}
     \caption{Detailed use case for "Configure Preparation System" task}
