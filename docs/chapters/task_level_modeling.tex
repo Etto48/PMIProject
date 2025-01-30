@@ -215,11 +215,11 @@ The task is performed by a ML engineer.
 \hline
 \textbf{3.1} \textbf {IF} it's the first configuration: &  &  &  & \\
 \hline
-\textbf{3.1.1} \textbf {ACTOR} inputs the desired number of iterations based on task complexity and previous experience. & 0.2 & 3 & 2.5 & 1.5 \\
+\textbf{3.1.1} \textbf {ACTOR} inputs the desired number of iterations based on task complexity and previous experience. & 0.002 & 3 & 2.5 & 1.5 \\
 \hline
 \textbf{3.2} \textbf {ELSE} (subsequent configurations): & & & & \\
 \hline
-\textbf{3.2.1} \textbf{ACTOR} inputs the number based on the established learning curve. & 0.8&1 &2.5 &2 \\
+\textbf{3.2.1} \textbf{ACTOR} inputs the number based on the established learning curve. & 0.998 & 1 & 2.5 & 2 \\
 \hline
 \textbf{4} \textbf{ACTOR} clicks "Submit" button to confirm the iteration number. & 1 & 1 & 2.5 & 2.5 \\
 \hline
@@ -467,15 +467,15 @@ The difference between the labels (if any) represents an error. & & & & \\
 \hline
 \textbf{3.3} \textbf{IF} at least one threshold is red &  &  & & \\
 \hline
-\textbf{3.3.1} \textbf{ACTOR} clicks the "Fail" button. &0.4 &1 & 1.15&0.46 \\
+\textbf{3.3.1} \textbf{ACTOR} clicks the "Fail" button. & 0.14 & 1 & 1.15& 0.161 \\
 \hline
 \textbf{3.4} \textbf{ELSE} & & & & \\
 \hline
-\textbf{3.4.1} \textbf{ACTOR} clicks the "Pass" button. &0.6 &1 & 1.15&0.65\\
+\textbf{3.4.1} \textbf{ACTOR} clicks the "Pass" button. & 0.86 & 1 & 1.15& 0.989 \\
 \hline
 \textbf{4} \textbf{SYSTEM} shows a confirmation dialog. & & & &\\
 \hline
-\textbf{5} \textbf{ACTOR} closes the form. &1 &1 & 1.15&1.15\\
+\textbf{5} \textbf{ACTOR} closes the form. & 1 & 1 & 1.15 &1.15\\
 \hline
 \multicolumn{4}{|r|}{Human task cost} &8.05 \\
 \hline
