@@ -215,11 +215,11 @@ The task is performed by a ML engineer.
 \hline
 \textbf{3.1} \textbf {IF} it's the first configuration: &  &  &  & \\
 \hline
-\textbf{3.1.1} \textbf {ACTOR} inputs the desired number of iterations based on task complexity and previous experience. & 0.002 & 3 & 2.5 & 1.5 \\
+\textbf{3.1.1} \textbf {ACTOR} inputs the desired number of iterations based on task complexity and previous experience. & 0.002 & 3 & 2.5 & 0.015 \\
 \hline
 \textbf{3.2} \textbf {ELSE} (subsequent configurations): & & & & \\
 \hline
-\textbf{3.2.1} \textbf{ACTOR} inputs the number based on the established learning curve. & 0.998 & 1 & 2.5 & 2 \\
+\textbf{3.2.1} \textbf{ACTOR} inputs the number based on the established learning curve. & 0.998 & 1 & 2.5 & 2.495 \\
 \hline
 \textbf{4} \textbf{ACTOR} clicks "Submit" button to confirm the iteration number. & 1 & 1 & 2.5 & 2.5 \\
 \hline
@@ -227,7 +227,7 @@ The task is performed by a ML engineer.
 \hline
 \textbf{6} \textbf{ACTOR} closes the form. & 1 & 1 & 2.5 & 2.5 \\
 \hline
-\multicolumn{4}{|r|}{Human task cost} & 11\\
+\multicolumn{4}{|r|}{Human task cost} & 10.01\\
 \hline
 \end{tabularx}
 \caption{Detailed use case for "Set iteration number" task\\ 
@@ -305,33 +305,39 @@ This task is performed by a ML engineer.
 \hline
 \textbf{3} \textbf{FOR EACH} model in the list: & 5 & & & \\
 \hline
-\textbf{3.1} \textbf{IF} the model Validation Loss minus the Training Loss is less than the Overfitting Tolerance and the Best Model is not selected. & 1 & 2 & 2.5 & 5 \\
+\textbf{3.1} \textbf{ACTOR} calculates model Validation Loss minus the Training Loss & 1 & 3 & 2.5 & 7.5 \\
 \hline
-\textbf{3.1.1} \textbf{THEN} select the model as the Best Model. & 1 & 1 & 2.5 & 2.5 \\
+\textbf{3.2} \textbf{IF 3.1} is less than the Overfitting Tolerance and the Best Model is not selected. & 1 & 3 & 2.5 & 7.5 \\
 \hline
-\textbf{4} \textbf{FOR EACH} model in the list: & 4 & & & \\
+\textbf{3.2.1} \textbf{THEN ACTOR} selects the model as the Best Model. & 1 & 1 & 2.5 & 2.5 \\
 \hline
-\textbf{4.1} \textbf{IF} the model is not the Best Model and the Validation Loss minus the Training Loss is less than the Overfitting Tolerance and the Second Best Model is not selected. & 1 & 2 & 2.5 & 5 \\
+\textbf{4} \textbf{FOR EACH} model in the list aside form the previous: & 4 & & & \\
 \hline
-\textbf{4.1.1} \textbf{THEN} select the model as the Second Best Model. & 1 & 1 & 2.5 & 2.5 \\
+\textbf{4.1} \textbf{ACTOR} calculates model Validation Loss minus the Training Loss & 1 & 3 & 2.5 & 7.5 \\
 \hline
-\textbf{5.1} \textbf{IF} the Best Model is not selected. & 0.05 & 1 & 2.5 & 0.125 \\
+\textbf{4.2} \textbf{IF 4.1} is less than the Overfitting Tolerance and the Second Best Model is not selected. & 1 & 3 & 2.5 & 7.5 \\
 \hline
-\textbf{5.1.1} \textbf{ACTOR} clicks "Reject" button. & 0.05 & 1 & 2.5 & 0.125\\
+\textbf{4.2.1} \textbf{THEN} select the model as the Second Best Model. & 0.25 & 1 & 2.5 & 0.625 \\
 \hline
-\textbf{5.2} \textbf{ELSE IF} the Second Best Model is not selected or the Validation Loss of the Second Best Model is one order of magnitude greater than the Validation Loss of the Best Model. & 0.3 & 3 & 2.5 & 2.25 \\
+\textbf{5} \textbf{ACTOR} calculates if the Validation Loss of the Second Best Model is one order of magnitude greater than the Validation Loss of the Best Model. & 1 & 3 & 2.5 & 7.5 \\
 \hline
-\textbf{5.2.1} \textbf{ACTOR} clicks on the Best Model. & 0.3 & 1 & 2.5 & 0.75 \\
+\textbf{6.1} \textbf{IF} the Best Model is not selected. & 0.05 & 1 & 2.5 & 0.125 \\
 \hline
-\textbf{5.3} \textbf{ELSE} & 0.65 & 3 & 2.5 & 4.875 \\
+\textbf{6.1.1} \textbf{ACTOR} clicks "Reject" button. & 0.05 & 1 & 2.5 & 0.125\\
 \hline
-\textbf{5.3.1} \textbf{ACTOR} clicks on the least complex model among the Best Model and the Second Best Model. & 0.65 & 3 & 2.5 & 4.875 \\
+\textbf{6.2} \textbf{ELSE IF} the Second Best Model is not selected or \textbf{5} is true & 0.3 & 3 & 2.5 & 2.25 \\
 \hline
-\textbf{6} \textbf{SYSTEM} shows a confirmation dialog. & & & & \\
+\textbf{6.2.1} \textbf{ACTOR} clicks on the Best Model. & 0.3 & 1 & 2.5 & 0.75 \\
 \hline
-\textbf{7} \textbf{ACTOR} closes the form. & 1 & 1 & 2.5 & 2.5 \\
+\textbf{6.3} \textbf{ELSE} & 0.65 & 3 & 2.5 & 4.875 \\
 \hline
-\multicolumn{4}{|r|}{Human task cost} & 32.91 \\
+\textbf{6.3.1} \textbf{ACTOR} clicks on the least complex model among the Best Model and the Second Best Model. & 0.65 & 3 & 2.5 & 4.875 \\
+\hline
+\textbf{7} \textbf{SYSTEM} shows a confirmation dialog. & & & & \\
+\hline
+\textbf{8} \textbf{ACTOR} closes the form. & 1 & 1 & 2.5 & 2.5 \\
+\hline
+\multicolumn{4}{|r|}{Human task cost} & 175.5 \\
 \hline
 \end{tabularx}
 \caption{Detailed use case for "Check validation report" task\\ 
@@ -406,39 +412,39 @@ This task is performed by a ML Engineer.
     \hline
     \textbf{3} \textbf{ACTOR} sets the \texttt{min\_layers}. & 1 & 4 & 2.50 & 10 \\
     \hline
-    \textbf{3} \textbf{ACTOR} sets the \texttt{max\_layers}. & 1 & 4 & 2.50 & 10 \\
+    \textbf{4} \textbf{ACTOR} sets the \texttt{max\_layers}. & 1 & 4 & 2.50 & 10 \\
     \hline
-    \textbf{3} \textbf{ACTOR} sets the \texttt{min\_neurons}. & 1 & 4 & 2.50 & 10 \\
+    \textbf{5} \textbf{ACTOR} sets the \texttt{min\_neurons}. & 1 & 4 & 2.50 & 10 \\
     \hline
-    \textbf{3} \textbf{ACTOR} sets the \texttt{step\_layers}. & 1 & 4 & 2.50 & 10 \\
+    \textbf{6} \textbf{ACTOR} sets the \texttt{step\_layers}. & 1 & 4 & 2.50 & 10 \\
     \hline
-    \textbf{3} \textbf{ACTOR} sets the \texttt{step\_neurons}. & 1 & 4 & 2.50 & 10 \\
+    \textbf{7} \textbf{ACTOR} sets the \texttt{step\_neurons}. & 1 & 4 & 2.50 & 10 \\
     \hline
-    \textbf{3} \textbf{ACTOR} sets the \texttt{max\_neurons}. & 1 & 4 & 2.50 & 10 \\
+    \textbf{8} \textbf{ACTOR} sets the \texttt{max\_neurons}. & 1 & 4 & 2.50 & 10 \\
     \hline
-    \textbf{4} \textbf{ACTOR} sets the \texttt{overfitting\_tolerance} parameter. & 1 & 4 & 2.50 & 10 \\
+    \textbf{9} \textbf{ACTOR} sets the \texttt{overfitting\_tolerance} parameter. & 1 & 4 & 2.50 & 10 \\
     \hline
-    \textbf{5} \textbf{ACTOR} sets the \texttt{generalization\_tolerance} parameter. & 1 & 4 & 2.50 & 10 \\
+    \textbf{10} \textbf{ACTOR} sets the \texttt{generalization\_tolerance} parameter. & 1 & 4 & 2.50 & 10 \\
     \hline
-    \textbf{6} \textbf{ACTOR} sets the \texttt{iterations} parameter. & 1 & 4 & 2.50 & 10 \\
+    \textbf{11} \textbf{ACTOR} sets the \texttt{iterations} parameter. & 1 & 4 & 2.50 & 10 \\
     \hline
-    \textbf{7} \textbf{ACTOR} choose the \texttt{training\_phase} parameter from the drop down (\texttt{validation, test}). & 1 & 1 & 2.50 & 2.50\\
+    \textbf{12} \textbf{ACTOR} choose the \texttt{training\_phase} parameter from the drop down (\texttt{validation, test}). & 1 & 1 & 2.50 & 2.50\\
     \hline
-    \textbf{8} \textbf{ACTOR} sets the \texttt{production\_sys\_addr} parameter. & 1 & 1 & 2.50 & 2.50 \\
+    \textbf{13} \textbf{ACTOR} sets the \texttt{production\_sys\_addr} parameter. & 1 & 1 & 2.50 & 2.50 \\
     \hline
-    \textbf{9} \textbf{ACTOR} sets the \texttt{messaging\_sys\_addr} parameter. & 1 & 1 & 2.50 & 2.50 \\
+    \textbf{14} \textbf{ACTOR} sets the \texttt{messaging\_sys\_addr} parameter. & 1 & 1 & 2.50 & 2.50 \\
     \hline
-    \textbf{10} \textbf{ACTOR} choose the \texttt{phase} parameter from the drop down (\texttt{inference, develop, evaluation}) . & 1 & 1 & 2.50 & 2.50 \\
+    \textbf{15} \textbf{ACTOR} choose the \texttt{phase} parameter from the drop down (\texttt{inference, develop, evaluation}) . & 1 & 1 & 2.50 & 2.50 \\
     \hline
-    \textbf{11.1} \textbf{SYSTEM} IF config is correct and correctly formatted. & & & & \\
+    \textbf{16.1} \textbf{SYSTEM} IF config is correct and correctly formatted. & & & & \\
     \hline
-    \textbf{11.1.1} \textbf{SYSTEM} shows a confirmation message. & & & & \\
+    \textbf{16.1.1} \textbf{SYSTEM} shows a confirmation message. & & & & \\
     \hline
-    \textbf{11.2} \textbf{ELSE} & & & & \\
+    \textbf{16.2} \textbf{ELSE} & & & & \\
     \hline
-    \textbf{11.2.1} \textbf{SYSTEM} shows error message and aborts. & & & & \\
+    \textbf{16.2.1} \textbf{SYSTEM} shows error message and aborts. & & & & \\
     \hline
-    \textbf{12} \textbf{ACTOR} saves the form. & 1 & 1 & 2.50 & 2.50 \\
+    \textbf{17} \textbf{ACTOR} saves the form. & 1 & 1 & 2.50 & 2.50 \\
     \hline
     \multicolumn{4}{|r|}{Human task cost} & 105 \\
     \hline
@@ -667,7 +673,7 @@ This task is performed by a ML Engineer.
     \hline
     \textbf{6} \textbf{ACTOR} sets the \texttt{preparation\_sys\_addr}. & 1 & 1  & 2.50 & 2.50 \\
     \hline
-    \textbf{7} \textbf{ACTOR} selects the \texttt{phase} from the dropdown (\texttt{inference}, \texttt{development}, \texttt{evaluation}). & 1 & 4  & 2.50 & 10 \\
+    \textbf{7} \textbf{ACTOR} selects the \texttt{phase} from the dropdown (\texttt{inference}, \texttt{development}, \texttt{evaluation}). & 1 & 1  & 2.50 & 2.50 \\
     \hline
     \textbf{8.1} \textbf{SYSTEM} IF the configurations are correct and properly formatted: &  &  &  &  \\
     \hline
@@ -679,12 +685,12 @@ This task is performed by a ML Engineer.
     \hline
     \textbf{9} \textbf{ACTOR} saves the form. & 1 & 1  & 2.50 & 2.50 \\
     \hline
-    \multicolumn{4}{|r|}{Human task cost} & 40 \\
+    \multicolumn{4}{|r|}{Human task cost} & 32.5 \\
     \hline
     \end{tabularx}
     \caption{Detailed use case for "Configure Ingestion System" task}
     \label{table:configure_ingestion_system}
-    \end{table} 
+\end{table} 
 
 \subsection{Preparation System}
 
@@ -729,7 +735,7 @@ This task is performed by a ML Engineer.
     \hline
     \textbf{12} \textbf{ACTOR} sets the \texttt{segregation\_sys\_addr}. & 1 & 1 & 2.50 & 2.50 \\
     \hline
-    \textbf{13} \textbf{ACTOR} selects the \texttt{phase} from the dropdown (\texttt{inference}, \texttt{develop}, \texttt{evaluation}). & 1 & 4 & 2.50 & 10 \\
+    \textbf{13} \textbf{ACTOR} selects the \texttt{phase} from the dropdown (\texttt{inference}, \texttt{develop}, \texttt{evaluation}). & 1 & 1 & 2.50 & 2.50 \\
     \hline
     \textbf{14} \textbf{SYSTEM} {IF} the configuration is correct and properly formatted: &  &  &  &  \\
     \hline
@@ -741,9 +747,9 @@ This task is performed by a ML Engineer.
     \hline
     \textbf{15} \textbf{ACTOR} saves the form. & 1 & 1 & 2.50 & 2.50 \\
     \hline
-    \multicolumn{4}{|r|}{\textbf{Human task cost}} & 100 \\
+    \multicolumn{4}{|r|}{\textbf{Human task cost}} & 92.5 \\
     \hline
     \end{tabularx}
     \caption{Detailed use case for "Configure Preparation System" task}
     \label{table:configure_preparation_system}
-    \end{table}
+\end{table}
