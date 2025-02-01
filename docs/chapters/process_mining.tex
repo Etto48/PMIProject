@@ -202,3 +202,84 @@ ProM & 0.7256 \\
 \caption{Violations in the ProM model visualized with ProM}
 \label{fig:violations_prom}
 \end{figure}
+
+Mining the logs with the violations included, we get these results:
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{figures/disco_violations_map.pdf}
+\caption{Disco transition map mined with violations}
+\label{fig:disco_violations_map}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{figures/apromore_violations_map.pdf}
+\caption{Apromore transition map mined with violations}
+\label{fig:apromore_violations_map}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{figures/prom_violations_mined.pdf}
+\caption{ProM mined BPMN model with violations}
+\label{fig:prom_violations_mined}
+\end{figure}
+
+As we can see, the BPMN model mined from ProM with the violations included
+does not change at all from the one without the violations.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{figures/apromore_violations_mined.pdf}
+\caption{Apromore mined BPMN model with violations}
+\label{fig:apromore_violations_mined}
+\end{figure}
+
+On the other hand, the BPMN model mined from Apromore with the violations
+included changes according to the violations, ultimately having a higher
+fitness.
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|r|l|l|l|l|}
+\hline
+\textbf{Tool} & \textbf{Fitness} & \textbf{Generalization} & \textbf{Precision} & \textbf{Simplicity} \\
+\hline
+Apromore & 1 & 0.9780 & 0.6742 & 69 \\
+\hline
+ProM & 0.7256 & 0.9909 & 0.8941 & 39 \\
+\hline
+\end{tabular}
+\caption{Comparison of the process mining tools with violations}
+\label{tab:process_mining_comparison_violations}
+\end{table}
+
+As expected, the fitness of the ProM mined model is the same as the one calculated
+with the same log, on the old model. Because the ProM model is much
+simpler than the Apromore one, its Generalization and Precision are higher while
+the Simplicity is lower. The Apromore model got more complex because of
+the violations, making its Generalization and Precision lower than
+the old model, also the Simplicity is a bit higher.
+The Apromore model, however, has a perfect fitness, because it is able to
+capture all the possible paths of the workflow, even with the violations.
+
+Because the ProM model did not change, we won't include its cases as
+they are the same as the ones from the old model.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{figures/violation_case/10-apromore-new.png}
+\includegraphics[width=\textwidth]{figures/violation_case/20-apromore-new.png}
+\includegraphics[width=\textwidth]{figures/violation_case/47-apromore-new.png}
+
+\includegraphics[width=\textwidth]{figures/violation_case/53-apromore-new.png}
+\includegraphics[width=\textwidth]{figures/violation_case/63-apromore-new.png}
+\includegraphics[width=\textwidth]{figures/violation_case/88-apromore-new.png}
+
+\includegraphics[width=\textwidth]{figures/violation_case/6-apromore-new.png}
+\includegraphics[width=\textwidth]{figures/violation_case/72-apromore-new.png}
+\includegraphics[width=\textwidth]{figures/violation_case/81-apromore-new.png}
+\caption{Violations in the new Apromore model visualized with ProM}
+\label{fig:violations_apromore_new}
+\end{figure}
