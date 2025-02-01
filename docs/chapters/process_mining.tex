@@ -30,6 +30,9 @@ DEVELOPMENT PHASE & 70\% & 30\% \\
 \label{tab:gateways_configuration}
 \end{table}
 
+\subsection{Transaction mining}
+\ididthis{Ettore Ricci, Paolo Palumbo}
+
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.8\textwidth]{figures/disco_map.pdf}
@@ -50,6 +53,9 @@ because in Disco the frequencies are calculated as the total number of
 times a transition is executed, even on the same token; while in Apromore
 the frequencies are calculated as the number of individual tokens that execute a
 transition. This behavior can be changed with a setting in both tools.
+
+\subsection{BPMN mining}
+\ididthis{Ettore Ricci, Paolo Palumbo}
 
 \begin{figure}[H]
 \centering
@@ -76,6 +82,9 @@ the training. Furthermore, the training loop is much simpler in the ProM model, 
 it is missing every path that restarts the training after
 "CHECK VALIDATION REPORT".
 
+\subsection{Conformance checking}
+\ididthis{Ettore Ricci, Paolo Palumbo}
+
 \begin{table}[H]
 \centering
 \begin{tabular}{|r|l|l|l|l|}
@@ -92,7 +101,7 @@ ProM & 0.7313 & 0.9902 & 0.8653 & 39 \\
 \end{table}
 
 \subsection{Violations}
-\label{sec:mining_violations}
+\ididthis{Ettore Ricci, Paolo Palumbo}
 
 We modified the logs to introduce 3 violations in the workflow. The
 violations are the following:
@@ -203,6 +212,9 @@ ProM & 0.7256 \\
 \label{fig:violations_prom}
 \end{figure}
 
+\subsubsection{Transaction mining with violations}
+\ididthis{Ettore Ricci, Paolo Palumbo}
+
 Mining the logs with the violations included, we get these results:
 
 \begin{figure}[H]
@@ -218,6 +230,9 @@ Mining the logs with the violations included, we get these results:
 \caption{Apromore transition map mined with violations}
 \label{fig:apromore_violations_map}
 \end{figure}
+
+\subsubsection{BPMN mining with violations}
+\ididthis{Ettore Ricci, Paolo Palumbo}
 
 \begin{figure}[H]
 \centering
@@ -239,6 +254,9 @@ does not change at all from the one without the violations.
 On the other hand, the BPMN model mined from Apromore with the violations
 included changes according to the violations, ultimately having a higher
 fitness.
+
+\subsubsection{Conformance checking with violations}
+\ididthis{Ettore Ricci, Paolo Palumbo}
 
 \begin{table}[H]
 \centering
